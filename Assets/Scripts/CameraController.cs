@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
     {
         if (!player)
         {
-            player = FindObjectOfType<Hero>().transform;
+            //player = FindObjectOfType<PlayerController>().transform;
         }
     }
     // Start is called before the first frame update
