@@ -15,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     //dash parametres
     [SerializeField] private float dashForce;
+    [SerializeField] private float dashCooldown = 1f;
     private bool isDashing = false;
+    private bool canDash = true;
     
     void FixedUpdate(){
          GroundCheck();
@@ -29,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
         HandleXMove();
         bodyFlip();
 
-        if(Input.GetKeyDown(KeyCode.LeftShift)&& !isDashing){
+        if(Input.GetKeyDown(KeyCode.LeftShift)&& !isDashing && canDash){
+            
             animator.SetTrigger("Dashing");
             StartCoroutine(Dash());
         }
@@ -53,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator Dash(){
         isDashing = true;
+        canDash = false;
         animator.SetBool("isDashing", isDashing);
         float originalGravity = body.gravityScale;
         body.gravityScale = 0f;
@@ -64,6 +68,8 @@ public class PlayerMovement : MonoBehaviour
         body.velocity = Vector2.zero;
         isDashing = false;
         animator.SetBool("isDashing", isDashing);
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
     void bodyFlip(){ 
         if(horizontalInput > 0.01f){
