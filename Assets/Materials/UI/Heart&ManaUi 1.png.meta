@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a178eaf489dc2be4baf7be4dec1f9468
+guid: 9b098bb6b322c2248b40f8e20d065bf1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanTownsfolkDmg_0
+      name: Heart&ManaUi 1_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 109
-        width: 9
-        height: 9
+        x: 0
+        y: 40
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c8ced59e085e1f4db8a666acdb93bb8
-      internalID: -1620231584
+      spriteID: bbd25b90ad255fa49906c41eb0927a63
+      internalID: -1869540205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkDmg_1
+      name: Heart&ManaUi 1_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 109
-        width: 10
+        x: 20
+        y: 41
+        width: 118
         height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,19 +158,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb26c5c32dee0f48bdb6299d947ce5c
-      internalID: -162450942
+      spriteID: ec3c121ffe918dd4fb406a813de83c90
+      internalID: -2110006943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkDmg_2
+      name: Heart&ManaUi 1_11
       rect:
         serializedVersion: 2
-        x: 75
-        y: 109
-        width: 8
+        x: 20
+        y: 30
+        width: 118
         height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4aaee0f1ec1a944ebb3e13a5399db65
-      internalID: -1885797554
+      spriteID: a7f69dece09a42041b03932b5e647172
+      internalID: -177464836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkDmg_3
+      name: Heart&ManaUi 1_21
       rect:
         serializedVersion: 2
-        x: 107
-        y: 109
-        width: 8
-        height: 9
+        x: 0
+        y: 13
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01bde224cd3912c4da549c90130817a2
-      internalID: -2035641652
+      spriteID: 66d827a935a86e54db20f8691190fa06
+      internalID: -1794627067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart&ManaUi 1_22
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 13
+        width: 118
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f07a43d87f05cc41a6495296b94556c
+      internalID: -1003042616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart&ManaUi 1_32
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1
+        width: 118
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d59c97e59bb96184f8e15cafe64827b9
+      internalID: -1193835219
       vertices: []
       indices: 
       edges: []
@@ -217,22 +259,48 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HumanTownsfolkDmg_0: -1620231584
-      HumanTownsfolkDmg_1: -162450942
-      HumanTownsfolkDmg_10: 685837113
-      HumanTownsfolkDmg_11: -584570081
-      HumanTownsfolkDmg_12: -38839346
-      HumanTownsfolkDmg_13: -2017102814
-      HumanTownsfolkDmg_14: -1739596523
-      HumanTownsfolkDmg_15: -1242108645
-      HumanTownsfolkDmg_2: -1885797554
-      HumanTownsfolkDmg_3: -2035641652
-      HumanTownsfolkDmg_4: 131322513
-      HumanTownsfolkDmg_5: 118329276
-      HumanTownsfolkDmg_6: 2085013801
-      HumanTownsfolkDmg_7: -395706285
-      HumanTownsfolkDmg_8: -114949949
-      HumanTownsfolkDmg_9: 1200853184
+      Heart&ManaUi 1_0: -1869540205
+      Heart&ManaUi 1_1: -2110006943
+      Heart&ManaUi 1_10: 1152207644
+      Heart&ManaUi 1_11: -177464836
+      Heart&ManaUi 1_12: -1378792343
+      Heart&ManaUi 1_13: 412850182
+      Heart&ManaUi 1_14: 2040243649
+      Heart&ManaUi 1_15: -333854052
+      Heart&ManaUi 1_16: 294131473
+      Heart&ManaUi 1_17: -1208108817
+      Heart&ManaUi 1_18: -1847236470
+      Heart&ManaUi 1_19: 1144937195
+      Heart&ManaUi 1_2: -770137957
+      Heart&ManaUi 1_20: -1723580908
+      Heart&ManaUi 1_21: -1794627067
+      Heart&ManaUi 1_22: -1003042616
+      Heart&ManaUi 1_23: 1691416578
+      Heart&ManaUi 1_24: 1438243085
+      Heart&ManaUi 1_25: 776329022
+      Heart&ManaUi 1_26: -644234964
+      Heart&ManaUi 1_27: 1202502716
+      Heart&ManaUi 1_28: -2071565707
+      Heart&ManaUi 1_29: -1721731482
+      Heart&ManaUi 1_3: -1695833562
+      Heart&ManaUi 1_30: 656007827
+      Heart&ManaUi 1_31: -399554972
+      Heart&ManaUi 1_32: -1193835219
+      Heart&ManaUi 1_33: 1348601210
+      Heart&ManaUi 1_34: -885703408
+      Heart&ManaUi 1_35: 1947582524
+      Heart&ManaUi 1_36: 1192920360
+      Heart&ManaUi 1_37: 874860069
+      Heart&ManaUi 1_38: 570028098
+      Heart&ManaUi 1_39: 749021187
+      Heart&ManaUi 1_4: -1866316745
+      Heart&ManaUi 1_40: -1607980827
+      Heart&ManaUi 1_41: 1380219356
+      Heart&ManaUi 1_5: -547721587
+      Heart&ManaUi 1_6: -1046285689
+      Heart&ManaUi 1_7: -70165326
+      Heart&ManaUi 1_8: 155276559
+      Heart&ManaUi 1_9: 946696682
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
