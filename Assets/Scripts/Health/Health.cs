@@ -4,11 +4,17 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Health : MonoBehaviour
-{
+{   
+    [Header ("Health")]
     [SerializeField] private float startingHealth;
     [SerializeField] private Animator animator;
     public float currentHealth {get; private set;}
     private bool dead;
+
+    [Header ("IFrames")]
+    [SerializeField] private float iFrameDuration;
+    [SerializeField] private float numberOfFlashes;
+    [SerializeField] private SpriteRenderer spriteRend;
 
     private void Awake(){
         currentHealth = startingHealth;
@@ -22,6 +28,8 @@ public class Health : MonoBehaviour
             animator.SetBool("grounded", true);
             animator.SetTrigger("Hurt");
             playerRb.velocity = new Vector3(0,0,0);
+            StartCoroutine(Invunerability());
+
             //iframes
         } else {
             if(!dead){
@@ -36,6 +44,20 @@ public class Health : MonoBehaviour
         }
 
 
+    }
+
+    private IEnumerator Invunerability(){
+        Debug.Log("Start invunerability");
+        Physics2D.IgnoreLayerCollision(7,8,true);
+        //main logic
+        for(int i =0; i< numberOfFlashes; i++){
+            Debug.Log("Start invunerability");
+            spriteRend.color = new Color(1,0,0, 0.5f);
+            yield return new WaitForSeconds(iFrameDuration/(numberOfFlashes*2));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFrameDuration/ (numberOfFlashes * 2));
+        }
+        Physics2D.IgnoreLayerCollision(7,8,false);
     }
     
 }
