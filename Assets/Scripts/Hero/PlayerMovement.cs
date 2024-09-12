@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing = false;
     private bool canDash = true;
     
+    private void OnDisable(){
+        animator.SetBool("grounded", true);
+        body.velocity = Vector3.zero;
+    }
+
     void FixedUpdate(){
          GroundCheck();
          HandleJump();

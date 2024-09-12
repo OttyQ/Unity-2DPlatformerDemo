@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c16b1d1d0f7a05c4b8bd6ddeb7ec8865
+guid: 1fdd3eddfb2b53942af7ab0efd7319c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_0
+      name: GoblinAttack_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 12
         y: 109
-        width: 9
-        height: 9
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,71 +137,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83d60cc1f742b3544a6f5c16d7a50e32
-      internalID: -1938717650
+      spriteID: b93c89e99ab1d9647b37babc97d08932
+      internalID: 113530060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_1
+      name: GoblinAttack_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 46
         y: 109
-        width: 15
-        height: 9
+        width: 14
+        height: 6
       alignment: 9
-      pivot: {x: 0.29944992, y: 0.50915784}
+      pivot: {x: 0.31311825, y: 0.437706}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34b9b10f7f9e3f242b7a4f2bcf7503cd
-      internalID: -1348529146
+      spriteID: 8c908869804d33442a74d9fd48144ca0
+      internalID: -350336098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_2
+      name: GoblinAttack_2
       rect:
         serializedVersion: 2
-        x: 78
-        y: 104
-        width: 12
-        height: 14
+        x: 79
+        y: 103
+        width: 11
+        height: 12
       alignment: 9
-      pivot: {x: 0.3763733, y: 0.6707224}
+      pivot: {x: 0.35437706, y: 0.718029}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c44650237f46ae49a0d235fddb0ca05
-      internalID: -1567112367
+      spriteID: 6f82accaac89ece4a9bbb0207aea8205
+      internalID: -1336607999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_3
+      name: GoblinAttack_3
       rect:
         serializedVersion: 2
-        x: 110
-        y: 104
-        width: 8
-        height: 14
+        x: 111
+        y: 103
+        width: 7
+        height: 12
       alignment: 9
-      pivot: {x: 0.5669632, y: 0.6795529}
+      pivot: {x: 0.54576653, y: 0.7002309}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07554661a6b46ce4fa21913bc97c7729
-      internalID: -996817531
+      spriteID: b19a14821ed104d429a8658ce840ad5f
+      internalID: 1860166826
       vertices: []
       indices: 
       edges: []
@@ -217,22 +217,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HumanTownsfolkAttack_0: -1938717650
-      HumanTownsfolkAttack_1: -1348529146
-      HumanTownsfolkAttack_10: -676876983
-      HumanTownsfolkAttack_11: 1005306762
-      HumanTownsfolkAttack_12: 808919225
-      HumanTownsfolkAttack_13: -1310891840
-      HumanTownsfolkAttack_14: -175944289
-      HumanTownsfolkAttack_15: 1146024496
-      HumanTownsfolkAttack_2: -1567112367
-      HumanTownsfolkAttack_3: -996817531
-      HumanTownsfolkAttack_4: 1240416193
-      HumanTownsfolkAttack_5: -1278951100
-      HumanTownsfolkAttack_6: 1152507809
-      HumanTownsfolkAttack_7: -2071896306
-      HumanTownsfolkAttack_8: -991738935
-      HumanTownsfolkAttack_9: 1036874803
+      GoblinAttack_0: 113530060
+      GoblinAttack_1: -350336098
+      GoblinAttack_10: 1064638543
+      GoblinAttack_11: -1270509939
+      GoblinAttack_12: 1784949278
+      GoblinAttack_13: -1733408874
+      GoblinAttack_14: 47170637
+      GoblinAttack_15: 1977305641
+      GoblinAttack_2: -1336607999
+      GoblinAttack_3: 1860166826
+      GoblinAttack_4: -1366452532
+      GoblinAttack_5: 1489903530
+      GoblinAttack_6: -1671348397
+      GoblinAttack_7: -303043628
+      GoblinAttack_8: -1367973007
+      GoblinAttack_9: 550720756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c16b1d1d0f7a05c4b8bd6ddeb7ec8865
+guid: 130539f345208b744864ca483fa785e2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,85 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_0
+      name: GoblinWalk_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 12
         y: 109
-        width: 9
-        height: 9
+        width: 7
+        height: 6
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83d60cc1f742b3544a6f5c16d7a50e32
-      internalID: -1938717650
+      spriteID: 2ed95dd88ab8bf04dafb29016ff7bb6b
+      internalID: -1798340819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_1
+      name: GoblinWalk_1
       rect:
         serializedVersion: 2
-        x: 45
+        x: 44
         y: 109
-        width: 15
-        height: 9
-      alignment: 9
-      pivot: {x: 0.29944992, y: 0.50915784}
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34b9b10f7f9e3f242b7a4f2bcf7503cd
-      internalID: -1348529146
+      spriteID: acf3d2042ea5c24409a83aa5a62cf9fb
+      internalID: 141188762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_2
+      name: GoblinWalk_2
       rect:
         serializedVersion: 2
-        x: 78
-        y: 104
-        width: 12
-        height: 14
-      alignment: 9
-      pivot: {x: 0.3763733, y: 0.6707224}
+        x: 76
+        y: 109
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c44650237f46ae49a0d235fddb0ca05
-      internalID: -1567112367
+      spriteID: a0d245f97529e10428279dc757ad7a86
+      internalID: 1626699586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HumanTownsfolkAttack_3
+      name: GoblinWalk_3
       rect:
         serializedVersion: 2
-        x: 110
-        y: 104
-        width: 8
-        height: 14
-      alignment: 9
-      pivot: {x: 0.5669632, y: 0.6795529}
+        x: 108
+        y: 109
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07554661a6b46ce4fa21913bc97c7729
-      internalID: -996817531
+      spriteID: a9eba0eebbfce7c4bb4a7e0d24bfe6f4
+      internalID: 1826533588
       vertices: []
       indices: 
       edges: []
@@ -217,22 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HumanTownsfolkAttack_0: -1938717650
-      HumanTownsfolkAttack_1: -1348529146
-      HumanTownsfolkAttack_10: -676876983
-      HumanTownsfolkAttack_11: 1005306762
-      HumanTownsfolkAttack_12: 808919225
-      HumanTownsfolkAttack_13: -1310891840
-      HumanTownsfolkAttack_14: -175944289
-      HumanTownsfolkAttack_15: 1146024496
-      HumanTownsfolkAttack_2: -1567112367
-      HumanTownsfolkAttack_3: -996817531
-      HumanTownsfolkAttack_4: 1240416193
-      HumanTownsfolkAttack_5: -1278951100
-      HumanTownsfolkAttack_6: 1152507809
-      HumanTownsfolkAttack_7: -2071896306
-      HumanTownsfolkAttack_8: -991738935
-      HumanTownsfolkAttack_9: 1036874803
+      GoblinWalk_0: -1798340819
+      GoblinWalk_1: 141188762
+      GoblinWalk_2: 1626699586
+      GoblinWalk_3: 1826533588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
