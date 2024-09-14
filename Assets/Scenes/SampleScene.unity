@@ -2217,6 +2217,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPatrol
       objectReference: {fileID: 0}
+    - target: {fileID: 8024026036485289973, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
+      propertyPath: chaseDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024026036485289973, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1233500228}
     - target: {fileID: 8509367870897889431, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5842886
