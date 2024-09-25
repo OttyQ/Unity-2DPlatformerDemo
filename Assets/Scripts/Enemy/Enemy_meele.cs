@@ -18,12 +18,16 @@ public class Enemy_meele : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private BoxCollider2D goblinBoxCollider;
     [SerializeField] private LayerMask playerLayer; 
-    [SerializeField] private Enemy_patrol enemyPatrol;
     private float cooldownTimer = Mathf.Infinity;
     private RaycastHit2D hit;
-    
 
-    
+
+    [Header ("Patrol Settings")]
+    [SerializeField] private bool isPatrol;
+    [SerializeField] private Enemy_patrol enemyPatrol;
+
+
+
     private void OnDisable(){
         goblinBoxCollider.enabled = false;
     }
@@ -35,7 +39,11 @@ public class Enemy_meele : MonoBehaviour
             animator.SetTrigger("Attack");
             }
         }
-        enemyPatrol.enabled = !PlayerInSight();
+        if (isPatrol)
+        {
+            enemyPatrol.enabled = !PlayerInSight();
+        }
+        
         
     }
 
@@ -57,7 +65,11 @@ public class Enemy_meele : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
          new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(boxCollider.bounds.center, enemyPatrol.chaseDistance);
+        if (isPatrol)
+        {
+            Gizmos.DrawWireSphere(boxCollider.bounds.center, enemyPatrol.chaseDistance);
+        }
+       
     }
 
     private void DamagePlayer(){

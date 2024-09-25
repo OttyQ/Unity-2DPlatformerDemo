@@ -1,0 +1,1216 @@
+fileFormatVersion: 2
+guid: 8b6f632f643d69842ad4fa726a288e75
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638628004036831773
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: GoblinKingEnter_Frame_0
+    originalName: 
+    pivot: {x: 0.72727275, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 112
+      width: 22
+      height: 13
+    spriteID: 12d8335da9241e7429249ecefa871ced
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 112}
+  - name: GoblinKingEnter_Frame_1
+    originalName: 
+    pivot: {x: 0.72727275, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 133
+      width: 22
+      height: 13
+    spriteID: 879db8c45c5ba024b956892b088cd7c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 133}
+  - name: GoblinKingEnter_Frame_2
+    originalName: 
+    pivot: {x: 0.72727275, y: -0.92857146}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 68
+      width: 22
+      height: 14
+    spriteID: 81beeaa06f27a034b86b782496683f8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 68}
+  - name: GoblinKingEnter_Frame_3
+    originalName: 
+    pivot: {x: 0.72727275, y: -0.92857146}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 90
+      width: 22
+      height: 14
+    spriteID: f70a93cc0c275ca4faa583561fe3151b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 90}
+  - name: GoblinKingEnter_Frame_4
+    originalName: 
+    pivot: {x: 0.72727275, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 154
+      width: 22
+      height: 13
+    spriteID: 62c69bd37fd685c418f145a41d40dd51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 154}
+  - name: GoblinKingEnter_Frame_5
+    originalName: 
+    pivot: {x: 0.72727275, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 175
+      width: 22
+      height: 13
+    spriteID: 873ccb69e91c641408dc9fdc26b58b6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 175}
+  - name: GoblinKingEnter_Frame_6
+    originalName: 
+    pivot: {x: 0.64, y: -0.92857146}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 46
+      width: 25
+      height: 14
+    spriteID: de566bf605f6c684e8313ed2f244647f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 46}
+  - name: GoblinKingEnter_Frame_7
+    originalName: 
+    pivot: {x: 0.5925926, y: -0.92857146}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 214
+      width: 27
+      height: 14
+    spriteID: a2e549516c9e4a1419fdd4ec1e97b4fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 214}
+  - name: GoblinKingEnter_Frame_8
+    originalName: 
+    pivot: {x: 0.55172414, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 29
+      height: 13
+    spriteID: d1316a1e83d560f45a49d1773ffda217
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 236}
+  - name: GoblinKingEnter_Frame_9
+    originalName: 
+    pivot: {x: 0.516129, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 31
+      height: 13
+    spriteID: 90c005ef7761c8948a2f8d84868815e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: GoblinKingEnter_Frame_10
+    originalName: 
+    pivot: {x: 0.516129, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 25
+      width: 31
+      height: 13
+    spriteID: 1e4b08edc7b4fdf45ae53d769af15e98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 25}
+  - name: GoblinKingEnter_Frame_11
+    originalName: 
+    pivot: {x: 0.516129, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 46
+      width: 31
+      height: 13
+    spriteID: 8ab9024bf5de26840a236ef575c1d330
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 46}
+  - name: GoblinKingEnter_Frame_12
+    originalName: 
+    pivot: {x: 0.516129, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 67
+      width: 31
+      height: 13
+    spriteID: cb096c58e321af749ae09019ac12766d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 67}
+  - name: GoblinKingEnter_Frame_13
+    originalName: 
+    pivot: {x: 0.516129, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 88
+      width: 31
+      height: 13
+    spriteID: 5d2bbdaf191b62448afc4173275fa0ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 88}
+  - name: GoblinKingEnter_Frame_14
+    originalName: 
+    pivot: {x: 0.55172414, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 4
+      width: 29
+      height: 13
+    spriteID: b860696aa00bd334fb944313bd7909e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 4}
+  - name: GoblinKingEnter_Frame_15
+    originalName: 
+    pivot: {x: 0.55172414, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 25
+      width: 29
+      height: 13
+    spriteID: b04741bb09e46154f9c6ef07c510912d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 25}
+  - name: GoblinKingEnter_Frame_16
+    originalName: 
+    pivot: {x: 0.53333336, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 109
+      width: 30
+      height: 13
+    spriteID: c0e9284e17d3f034295b10bf586fea2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 109}
+  - name: GoblinKingEnter_Frame_17
+    originalName: 
+    pivot: {x: 0.53333336, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 130
+      width: 30
+      height: 13
+    spriteID: c702bb83bcb35774f8b23f9700ef580a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 130}
+  - name: GoblinKingEnter_Frame_18
+    originalName: 
+    pivot: {x: 0.53333336, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 151
+      width: 30
+      height: 13
+    spriteID: 49519cbe77d4b1643a9a3143850740d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 151}
+  - name: GoblinKingEnter_Frame_19
+    originalName: 
+    pivot: {x: 0.53333336, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 172
+      width: 30
+      height: 13
+    spriteID: 4725795cde6445b45868a358c089efc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 172}
+  - name: GoblinKingEnter_Frame_20
+    originalName: 
+    pivot: {x: 0.53333336, y: -1.0769231}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 193
+      width: 30
+      height: 13
+    spriteID: f2246e8ef238f614c84453c12796c9ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 193}
+  spriteSheetImportData:
+  - name: GoblinKingEnter_0
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.37391153}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 236
+      width: 33
+      height: 15
+    spriteID: 796b72a81d025aa45b3c1144fe1dac04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_1
+    originalName: 
+    pivot: {x: 0.37620488, y: 0.36382446}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 215
+      width: 33
+      height: 15
+    spriteID: b81a55d366a2733428ed5e901bb56509
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_2
+    originalName: 
+    pivot: {x: 0.3784975, y: 0.37895507}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 193
+      width: 33
+      height: 15
+    spriteID: e9bf292d8326e4d4abf36e3bdb7b6000
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_3
+    originalName: 
+    pivot: {x: 0.3739124, y: 0.37895507}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 172
+      width: 33
+      height: 15
+    spriteID: 95a1019f8729ec646aa2f33ae259792d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_4
+    originalName: 
+    pivot: {x: 0.3784975, y: 0.37391254}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 151
+      width: 33
+      height: 15
+    spriteID: 9d1ca17c2ba45904391ae3714ef1c71b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_5
+    originalName: 
+    pivot: {x: 0.3784975, y: 0.37391254}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 130
+      width: 33
+      height: 15
+    spriteID: 3242e2081bc4b8a4681479ffc9f3a3ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_6
+    originalName: 
+    pivot: {x: 0.3784975, y: 0.38399965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 109
+      width: 33
+      height: 15
+    spriteID: b3a7db0cf72e6924ea3958a9fca40107
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_7
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.3789561}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 88
+      width: 33
+      height: 15
+    spriteID: d83484ffd1e409442907ecf8e0551c99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_8
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.36382547}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 67
+      width: 33
+      height: 15
+    spriteID: e39dae9ed129da64baec3339dbe947a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_9
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.37391254}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 46
+      width: 33
+      height: 15
+    spriteID: 25b7ff9563c524948a4946d84bcce5ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_10
+    originalName: 
+    pivot: {x: 0.38078997, y: 0.36886877}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 25
+      width: 33
+      height: 15
+    spriteID: 7ecd56131feea15438c933c1777082fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_11
+    originalName: 
+    pivot: {x: 0.3807898, y: 0.36886927}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 33
+      height: 15
+    spriteID: e534bd5836a154d489b3a4f84517f94f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_12
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.36886984}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 4
+      width: 33
+      height: 15
+    spriteID: 99056ca939e0a9c48ab69cf6c2da53fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_13
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.37391308}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 25
+      width: 33
+      height: 15
+    spriteID: 637e8486015ec5545969ab287f2f5faf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_14
+    originalName: 
+    pivot: {x: 0.37620488, y: 0.3688695}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 47
+      width: 33
+      height: 15
+    spriteID: 61efa72e413127049b32ca18f22b599c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_15
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.368869}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 69
+      width: 33
+      height: 15
+    spriteID: aac38618e06c5d644a30c0c3705e562d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_16
+    originalName: 
+    pivot: {x: 0.37620488, y: 0.37391254}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 91
+      width: 33
+      height: 15
+    spriteID: c9774eecbdc22a84e8f575d3c3208293
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_17
+    originalName: 
+    pivot: {x: 0.37620488, y: 0.368869}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 112
+      width: 33
+      height: 15
+    spriteID: 886dc432f55fa8a41a7c82b6979be17d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_18
+    originalName: 
+    pivot: {x: 0.37620488, y: 0.368869}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 133
+      width: 33
+      height: 15
+    spriteID: 9b3814da91d439c46ba4f57d256a0f50
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_19
+    originalName: 
+    pivot: {x: 0.37849733, y: 0.368869}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 154
+      width: 33
+      height: 15
+    spriteID: 645efba78300fda42b19c23b05754d61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: GoblinKingEnter_20
+    originalName: 
+    pivot: {x: 0.3759105, y: 0.36118776}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 175
+      width: 33
+      height: 15
+    spriteID: c08723ae5dc9f5f4c918af2e8d1aa5af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1302644688
+    name: GoblinKingEnter
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: GoblinKingEnter_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 22
+        height: 13
+      spriteId: 12d8335da9241e7429249ecefa871ced
+    - name: GoblinKingEnter_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 22
+        height: 13
+      spriteId: 879db8c45c5ba024b956892b088cd7c5
+    - name: GoblinKingEnter_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 13
+        width: 22
+        height: 14
+      spriteId: 81beeaa06f27a034b86b782496683f8f
+    - name: GoblinKingEnter_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 13
+        width: 22
+        height: 14
+      spriteId: f70a93cc0c275ca4faa583561fe3151b
+    - name: GoblinKingEnter_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 22
+        height: 13
+      spriteId: 62c69bd37fd685c418f145a41d40dd51
+    - name: GoblinKingEnter_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 22
+        height: 13
+      spriteId: 873ccb69e91c641408dc9fdc26b58b6b
+    - name: GoblinKingEnter_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 13
+        width: 25
+        height: 14
+      spriteId: de566bf605f6c684e8313ed2f244647f
+    - name: GoblinKingEnter_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 13
+        width: 27
+        height: 14
+      spriteId: a2e549516c9e4a1419fdd4ec1e97b4fa
+    - name: GoblinKingEnter_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 29
+        height: 13
+      spriteId: d1316a1e83d560f45a49d1773ffda217
+    - name: GoblinKingEnter_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 31
+        height: 13
+      spriteId: 90c005ef7761c8948a2f8d84868815e9
+    - name: GoblinKingEnter_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 31
+        height: 13
+      spriteId: 1e4b08edc7b4fdf45ae53d769af15e98
+    - name: GoblinKingEnter_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 31
+        height: 13
+      spriteId: 8ab9024bf5de26840a236ef575c1d330
+    - name: GoblinKingEnter_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 31
+        height: 13
+      spriteId: cb096c58e321af749ae09019ac12766d
+    - name: GoblinKingEnter_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 31
+        height: 13
+      spriteId: 5d2bbdaf191b62448afc4173275fa0ee
+    - name: GoblinKingEnter_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 29
+        height: 13
+      spriteId: b860696aa00bd334fb944313bd7909e3
+    - name: GoblinKingEnter_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 29
+        height: 13
+      spriteId: b04741bb09e46154f9c6ef07c510912d
+    - name: GoblinKingEnter_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 30
+        height: 13
+      spriteId: c0e9284e17d3f034295b10bf586fea2a
+    - name: GoblinKingEnter_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 30
+        height: 13
+      spriteId: c702bb83bcb35774f8b23f9700ef580a
+    - name: GoblinKingEnter_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 30
+        height: 13
+      spriteId: 49519cbe77d4b1643a9a3143850740d7
+    - name: GoblinKingEnter_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 30
+        height: 13
+      spriteId: 4725795cde6445b45868a358c089efc8
+    - name: GoblinKingEnter_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 0
+        y: 14
+        width: 30
+        height: 13
+      spriteId: f2246e8ef238f614c84453c12796c9ca
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Android
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}

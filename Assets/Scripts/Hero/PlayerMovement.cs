@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     
     private void OnDisable(){
+        body.velocity = Vector2.zero;
         animator.SetBool("grounded", true);
-        body.velocity = Vector3.zero;
     }
 
     void FixedUpdate(){

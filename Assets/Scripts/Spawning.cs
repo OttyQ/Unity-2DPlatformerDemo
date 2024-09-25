@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawning : MonoBehaviour
 {
-
     [SerializeField] float heightdie = -20f;
+    [Header ("Health")]
+    [SerializeField] UnityEvent heroHealth;
+
+
+
     Vector2 CheckPointPos;
     public PlayerMovement hero;
     public void Start()
@@ -24,40 +29,30 @@ public class Spawning : MonoBehaviour
 
     void Update()
     {
-        Checkheight(); //                            
-
-        //if (hero.lives <= 0)
-        //{
-        //    DieFall();
-        //}
+        Checkheight();
     }
 
     public void Checkheight()
-    {
-        //Debug.Log("Checking height: " + transform.position.y); //                
+    {            
         if (transform.position.y < heightdie)
         {
-            DieFall();                     
+            heroHealth.Invoke();                 
         }
     }
-
-    public void DieFall()
+    public void HandleRespawn()
     {
-        Debug.Log("DieFall triggered");
-        StartCoroutine(Respawn(0.5f)); 
-    }
-
-    IEnumerator Respawn(float duration)
-    {
-        Debug.Log("Respawn started, waiting for " + duration + " seconds.");
-        yield return new WaitForSeconds(duration);
-        Debug.Log("Respawning to position: " + CheckPointPos);
+        hero.body.velocity = Vector2.zero;
         transform.position = CheckPointPos;
     }
 
     public void UpdateCheckPoint(Vector2 pos)
     {
-        Debug.Log("Updating checkpoint to: " + pos);
-        CheckPointPos = pos;
+        if (CheckPointPos != pos)
+        {
+            Debug.Log("Updating checkpoint to: " + pos);
+            CheckPointPos = pos;
+        }
     }
+
+    
 }

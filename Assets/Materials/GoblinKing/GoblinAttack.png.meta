@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 450a4ee27521277428d322c6493a3c70
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GoblinAttack_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 157
+        width: 9
+        height: 11
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.54545456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e90b933c7b393b4a95dd50999997490
+      internalID: 669892244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 156
+        width: 20
+        height: 12
+      alignment: 9
+      pivot: {x: 0.25, y: 0.5833334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a70d2e67568c144c96cab692d6968d6
+      internalID: 1756887260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 150
+        width: 11
+        height: 18
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.7222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9aaef70d2650684da4baa74f6bd65f9
+      internalID: -2007893463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 154
+        width: 8
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6428572}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27293bde2f2ac9d4fa020654c5b66b45
+      internalID: -1732409897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 124
+        width: 9
+        height: 11
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.54545456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8398f31995b7bf4688eada8651edfcd
+      internalID: -336761139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_6
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 124
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f6b9c26c7fda0439d1d65ad5a7d265
+      internalID: -1594317035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_7
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 124
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22ee352c0ea00841b24471d9b5a5706
+      internalID: 1915137863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_8
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 124
+        width: 9
+        height: 15
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.40000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e07addb59c33c5449382a34178068bb
+      internalID: 596874704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_9
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 92
+        width: 9
+        height: 15
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.40000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7c37009af3bb342be53943647f131c
+      internalID: 1472381362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_10
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 92
+        width: 9
+        height: 15
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.40000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd839e58cd018834ebcede726fd7f931
+      internalID: 1225176256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_11
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 91
+        width: 9
+        height: 17
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.3529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb79f945d621f2b4b96b222ca08c0dfc
+      internalID: -522678221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_12
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 91
+        width: 8
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7250d316e7ed21846b23c12d3aa0710b
+      internalID: 1417285160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 60
+        width: 11
+        height: 17
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.3529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baa30f881cdc394c8cccbaee6474001
+      internalID: -974170561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_17
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 60
+        width: 19
+        height: 18
+      alignment: 9
+      pivot: {x: 0.21052632, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7be10a49a2fa9c439d324a11bc76402
+      internalID: -249545285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_21
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 25
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9679d14d8165b49853019f4604659c
+      internalID: -1649944980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_23
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 26
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebbaec8a6b0c494c84c81b4908c04c6
+      internalID: -1693489566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_25
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 25
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6b0cec22933124ebeaf873d19962de
+      internalID: 701559119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_27
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 60
+        width: 15
+        height: 17
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0.3529412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5d5768de6b64849a6239d2991c4478
+      internalID: 868357083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoblinAttack_15
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 59
+        width: 19
+        height: 19
+      alignment: 9
+      pivot: {x: 0.21052632, y: 0.36842105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0479b88fc484341b511255a32f1feb
+      internalID: -1211539637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GoblinAttack_0: 669892244
+      GoblinAttack_1: 1756887260
+      GoblinAttack_10: 1225176256
+      GoblinAttack_11: -522678221
+      GoblinAttack_12: 1417285160
+      GoblinAttack_13: -974170561
+      GoblinAttack_14: -372406095
+      GoblinAttack_15: -1211539637
+      GoblinAttack_16: -1024437141
+      GoblinAttack_17: -249545285
+      GoblinAttack_18: -1868678555
+      GoblinAttack_19: -952708885
+      GoblinAttack_2: -1168713230
+      GoblinAttack_20: -633341099
+      GoblinAttack_21: -1649944980
+      GoblinAttack_22: -455707049
+      GoblinAttack_23: -1693489566
+      GoblinAttack_24: -1897874050
+      GoblinAttack_25: 701559119
+      GoblinAttack_26: 1015983444
+      GoblinAttack_27: 868357083
+      GoblinAttack_3: -2007893463
+      GoblinAttack_4: -1732409897
+      GoblinAttack_5: -336761139
+      GoblinAttack_6: -1594317035
+      GoblinAttack_7: 1915137863
+      GoblinAttack_8: 596874704
+      GoblinAttack_9: 1472381362
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
