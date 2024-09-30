@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Traps
   - Corps
   - Shrine
-  - 
+  - Boss
   - 
   - 
   - 
@@ -38,12 +39,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: 1Sky
+    uniqueID: 541300335
+    locked: 0
+  - name: 2Moon
+    uniqueID: 4139151855
+    locked: 0
+  - name: 3BackGround
+    uniqueID: 96086331
+    locked: 0
+  - name: 4SeconBeckGround
+    uniqueID: 514606149
+    locked: 0
+  - name: BackGroundTile
+    uniqueID: 1834270311
     locked: 0
   - name: Shrine
     uniqueID: 3700095363
     locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
   - name: Player
     uniqueID: 2415817499
+    locked: 0
+  - name: Foreground
+    uniqueID: 2955322525
     locked: 0

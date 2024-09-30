@@ -48,6 +48,7 @@ public class Health : MonoBehaviour
             }
 
             StartCoroutine(Invunerability());
+            isInvulnerable = false;
 
             //iframes
         } else {
@@ -103,5 +104,6 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes * 2));
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
+
     }
 }

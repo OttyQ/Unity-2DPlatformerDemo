@@ -28,9 +28,7 @@ public class Enemy_meele : MonoBehaviour
 
 
 
-    private void OnDisable(){
-        goblinBoxCollider.enabled = false;
-    }
+    
     private void Update(){
         cooldownTimer += Time.deltaTime;
         if(PlayerInSight()){
@@ -76,5 +74,10 @@ public class Enemy_meele : MonoBehaviour
         if(PlayerInSight()){
             playerHealth.TakeDamage(damage);
         }
+    }
+
+    public void HandleDie()
+    {
+        GameObject.Destroy(gameObject);
     }
 }

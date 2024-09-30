@@ -11,13 +11,15 @@ public class GoblinKing_Attack : MonoBehaviour
     [SerializeField] int enragedAttackDamage = 2;
     [SerializeField] float attackRange;
     [SerializeField] Animator camerAnim;
-   
+    [SerializeField] Animator bossAnim;
+
 
     public Vector3 attackOffset;
     public LayerMask attackMask;
 
-    [Header("References")]
-    [SerializeField] Health playerHealth;
+    private Health playerHealth;
+
+    //[SerializeField] Health playerHealth;
 
     public void Attack()
     {
@@ -29,10 +31,19 @@ public class GoblinKing_Attack : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            colInfo.GetComponentInParent<Health>().TakeDamage(attackDamage);
-            //camerAnim.SetTrigger("Shake");
-            //playerHealth.TakeDamage(attackDamage); 
+            //colInfo.GetComponentInParent<Health>().TakeDamage(attackDamage);
+            playerHealth = colInfo.GetComponentInParent<Health>();
+            playerHealth.TakeDamage(attackDamage);
+            if (playerHealth.currentHealth <= 0)
+            {
+                bossAnim.SetTrigger("Win");
+            }
         }
+        
+    }
+
+    public void Update()
+    {
         
     }
 
@@ -47,14 +58,18 @@ public class GoblinKing_Attack : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            
-            colInfo.GetComponentInParent<Health>().TakeDamage(enragedAttackDamage);
+
+            playerHealth = colInfo.GetComponentInParent<Health>();
+            playerHealth.TakeDamage(enragedAttackDamage);
+            if(playerHealth.currentHealth <= 0)
+            {
+                bossAnim.SetTrigger("Win");
+            }
+
             
         }
         
     }
-
-
 
     void OnDrawGizmosSelected()
     {

@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -164,6 +164,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles 1_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 64
+        width: 6
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b0bb88a2e098b4c8e931654db30fc3
+      internalID: 1215099293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles 1_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 75
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6396c94dd8a864eaece8999fdbd2ab
+      internalID: 139771659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles 1_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 75
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32e27b3cfe4e73408a6f806f24c513b
+      internalID: 428553608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -179,6 +242,7 @@ TextureImporter:
       cavesofgallet_tiles 1_1: -525816978
       cavesofgallet_tiles 1_2: 1215099293
       cavesofgallet_tiles 1_3: 139771659
+      cavesofgallet_tiles 1_4: 428553608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -143,6 +143,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cavesofgallet_tiles 2_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 40
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c2c0ef32361954f9a1eb3a9b162f88
+      internalID: -529159795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -155,6 +176,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       cavesofgallet_tiles 2_0: -2066231670
+      cavesofgallet_tiles 2_1: -529159795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
