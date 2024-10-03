@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [Header("Health")]
+    public bool canShake = false;
     [SerializeField] public float startingHealth;
     [SerializeField] private Animator animator;
     [SerializeField] private bool canRevive;
@@ -25,6 +26,7 @@ public class Health : MonoBehaviour
     [Header ("Components")]
     [SerializeField] private Behaviour[] components;
     [SerializeField] UnityEvent activateRespawn;
+    [SerializeField] Animator cameraAnim;
     private void Awake(){
         currentHealth = startingHealth;
     }
@@ -38,6 +40,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0){
             animator.SetBool("grounded", true);
+            if(canShake) cameraAnim.SetTrigger("Shake");
             animator.SetTrigger("Hurt");
 
             Debug.Log("Current health: " + currentHealth + "StartingHealth/2: " + startingHealth / 2);

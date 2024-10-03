@@ -116,6 +116,90 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4656262322080927010}
   boss: {fileID: 8716370851945836287}
+--- !u!1 &4328509861560041279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1224140359489837472}
+  - component: {fileID: 7032450559528596941}
+  m_Layer: 8
+  m_Name: WavePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1224140359489837472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328509861560041279}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.25, y: 0.08, z: 0}
+  m_LocalScale: {x: 3.36, y: 3.36, z: 3.36}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 114929281467840330}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7032450559528596941
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328509861560041279}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c130b41d1f572a14793b146add3d6e3f, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &4981783733722847833
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +398,7 @@ Transform:
   m_Children:
   - {fileID: 7236591753107925259}
   - {fileID: 8605501256872478743}
+  - {fileID: 1224140359489837472}
   m_Father: {fileID: 7525223991810305148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6538847093181255799
@@ -442,6 +527,8 @@ MonoBehaviour:
   attackRange: 1
   camerAnim: {fileID: 0}
   bossAnim: {fileID: 6538847093181255799}
+  wavePoint: {fileID: 0}
+  wave: {fileID: 0}
   attackOffset: {x: 0.5, y: 0.35, z: 0}
   attackMask:
     serializedVersion: 2
@@ -458,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad39c2e2438ae24f87f8d572acc537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShake: 0
   startingHealth: 25
   animator: {fileID: 6538847093181255799}
   canRevive: 0
@@ -473,6 +561,7 @@ MonoBehaviour:
   activateRespawn:
     m_PersistentCalls:
       m_Calls: []
+  cameraAnim: {fileID: 0}
 --- !u!1 &9195055819832327689
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,13 @@ public class GoblinKing_Run : StateMachineBehaviour
 
     [Header("Attack parameters")]
     [SerializeField] float attackCooldown;
-    private float cooldownTimer = Mathf.Infinity;
     [SerializeField] float attackRange;
+    private float cooldownTimer = Mathf.Infinity;
+
+    [Header("Charged Attack parameters")]
+    [SerializeField] bool canChargedAttack = false;
+    [SerializeField] float chargedAttackCooldown;
+    [SerializeField] float chargedAttackRange;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -50,6 +55,17 @@ public class GoblinKing_Run : StateMachineBehaviour
                 animator.SetTrigger("Attack");
             }
         }
+        if (Vector2.Distance(playerPosition2D, rb.position) <= chargedAttackRange)
+        {
+            if (cooldownTimer >= chargedAttackCooldown && canChargedAttack)
+            {
+                cooldownTimer = 0;
+                rb.velocity = Vector2.zero;
+                animator.SetTrigger("CanChargedAttack");
+                animator.SetTrigger("Attack");
+
+            }
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -57,7 +73,7 @@ public class GoblinKing_Run : StateMachineBehaviour
     {
         animator.ResetTrigger("Attack");
         animator.ResetTrigger("CanAttack");
+        animator.ResetTrigger("CanChargedAttack");
         rb.velocity = Vector2.zero; // Остановка при выходе из состояния
-        Physics2D.IgnoreLayerCollision(7, 8, false); // Восстановление столкновений
     }
 }

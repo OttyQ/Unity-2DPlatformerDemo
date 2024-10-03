@@ -26,27 +26,25 @@ public class GoblinKing_ : MonoBehaviour
     }
     public void LookAtPlayer()
     {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
-
-        if (transform.position.x > player.position.x && !isFlipped)
+        // Если объект смотрит вправо изначально
+        if (transform.position.x > player.position.x && transform.localScale.x > 0)
         {
-            Flip();
+            Flip(); // Повернуть влево
         }
-        else if (transform.position.x < player.position.x && isFlipped)
+        else if (transform.position.x < player.position.x && transform.localScale.x < 0)
         {
-            Flip();
+            Flip(); // Повернуть вправо
         }
     }
 
     private void Flip()
     {
+        // Меняем только масштаб по оси X для разворота объекта
         Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
+        flipped.x *= -1f;  // Инвертируем ось X
 
-        transform.localScale = flipped;
-        transform.Rotate(0f, 180f, 0f);
-        isFlipped = !isFlipped;
+        transform.localScale = flipped; // Применяем новый масштаб
+        isFlipped = !isFlipped; // Меняем статус флага
     }
 
     public void HandleDie()

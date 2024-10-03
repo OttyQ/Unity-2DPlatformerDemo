@@ -13,6 +13,10 @@ public class GoblinKing_Attack : MonoBehaviour
     [SerializeField] Animator camerAnim;
     [SerializeField] Animator bossAnim;
 
+    [Header("Wave parameters")]
+    [SerializeField] Transform wavePoint; //точка от которой будет идти волна
+    [SerializeField] GameObject wave;
+
 
     public Vector3 attackOffset;
     public LayerMask attackMask;
@@ -23,7 +27,7 @@ public class GoblinKing_Attack : MonoBehaviour
 
     public void Attack()
     {
-        
+        //position of attack collider
         Vector3 pos = transform.position;
         pos += transform.right * attackOffset.x;
         pos += transform.up * attackOffset.y;
@@ -39,7 +43,6 @@ public class GoblinKing_Attack : MonoBehaviour
                 bossAnim.SetTrigger("Win");
             }
         }
-        
     }
 
     public void Update()
@@ -65,8 +68,6 @@ public class GoblinKing_Attack : MonoBehaviour
             {
                 bossAnim.SetTrigger("Win");
             }
-
-            
         }
         
     }
@@ -78,5 +79,16 @@ public class GoblinKing_Attack : MonoBehaviour
         pos += transform.up * attackOffset.y;
 
         Gizmos.DrawWireSphere(pos, attackRange);
+    }
+
+    public void WaveAfterAttack()
+    {
+        //wave logic
+        wave.transform.position = wavePoint.position;
+        Debug.Log("Transform pos: " + Mathf.Sign(transform.position.x));
+        wave.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        
+       
+        
     }
 }
