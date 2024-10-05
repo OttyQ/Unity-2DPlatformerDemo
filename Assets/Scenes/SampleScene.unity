@@ -3382,6 +3382,10 @@ PrefabInstance:
       value: Slash
       objectReference: {fileID: 0}
     - target: {fileID: 1390673082487616528, guid: 581f26170744c8e4b8f239221ef5045f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1390673082487616528, guid: 581f26170744c8e4b8f239221ef5045f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -25345,6 +25349,14 @@ PrefabInstance:
       propertyPath: wavePoint
       value: 
       objectReference: {fileID: 2050356}
+    - target: {fileID: 1222985239002621474, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
+      propertyPath: attackRange
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1222985239002621474, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
+      propertyPath: enragedAttackDamage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4254667392441347421, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
       propertyPath: m_Name
       value: BossTent
@@ -25411,7 +25423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716370851945836287, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25716,7 +25728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908781724529242054, guid: a4f72cfa6dc435146875fcc75d7328ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.94
+      value: -5.79
       objectReference: {fileID: 0}
     - target: {fileID: 8908781724529242054, guid: a4f72cfa6dc435146875fcc75d7328ec, type: 3}
       propertyPath: m_LocalPosition.z

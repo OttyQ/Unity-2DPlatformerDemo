@@ -24,7 +24,7 @@ public class Spawning : MonoBehaviour
             return;
         }
         CheckPointPos = transform.position;
-        Debug.Log("Start position: " + CheckPointPos); //                           
+        Debug.Log("Start position: " + CheckPointPos);                          
     }
 
     void Update()

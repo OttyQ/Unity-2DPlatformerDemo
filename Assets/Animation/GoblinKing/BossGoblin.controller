@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  attackCooldown: 1
+  attackCooldown: 2
   attackRange: 1.5
   canChargedAttack: 1
   chargedAttackCooldown: 2.5
@@ -616,16 +616,19 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isEnrage
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6219194444698764337}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.037403286
-  m_TransitionOffset: 0.27355266
-  m_ExitTime: 0.922046
+  m_TransitionDuration: 0.045149088
+  m_TransitionOffset: 0.19946258
+  m_ExitTime: 0.8121059
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -663,10 +666,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.04027623
-  m_TransitionOffset: 0.40591726
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0.4059172
   m_ExitTime: 0.94746566
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
