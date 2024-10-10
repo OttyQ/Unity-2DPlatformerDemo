@@ -12,13 +12,17 @@ public class GoblinKing_Run : StateMachineBehaviour
 
     [Header("Attack parameters")]
     [SerializeField] float attackCooldown;
-    [SerializeField] float attackRange;
     private float cooldownTimer = Mathf.Infinity;
 
     [Header("Charged Attack parameters")]
     [SerializeField] bool canChargedAttack = false;
     [SerializeField] float chargedAttackCooldown;
-    [SerializeField] float chargedAttackRange;
+    
+
+    [Header("Collider references")]
+    private BoxCollider2D attackCollider; // Коллайдер атаки
+    private BoxCollider2D chargedAttackCollider; // Коллайдер заряженной атаки
+    private Collider2D playerCollider; // Коллайдер игрока
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -26,6 +30,9 @@ public class GoblinKing_Run : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
         goblinKing = animator.GetComponent<GoblinKing_>();
+        attackCollider = animator.transform.Find("AttackCollider").GetComponent<BoxCollider2D>();
+        chargedAttackCollider = animator.transform.Find("ChAttackCol").GetComponent<BoxCollider2D>();
+        playerCollider = player.GetComponentInChildren<Collider2D>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -44,9 +51,8 @@ public class GoblinKing_Run : StateMachineBehaviour
         cooldownTimer += Time.deltaTime;
 
         // Атака, если игрок в радиусе
-        if (Vector2.Distance(playerPosition2D, rb.position) <= attackRange)
+        if (attackCollider.IsTouching(playerCollider))
         {
-            cooldownTimer += Time.deltaTime;
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
@@ -55,15 +61,16 @@ public class GoblinKing_Run : StateMachineBehaviour
                 animator.SetTrigger("Attack");
             }
         }
-        if (Vector2.Distance(playerPosition2D, rb.position) <= chargedAttackRange)
+
+
+        if (canChargedAttack && chargedAttackCollider.IsTouching(playerCollider))
         {
             if (cooldownTimer >= chargedAttackCooldown && canChargedAttack)
             {
                 cooldownTimer = 0;
-                rb.velocity = Vector2.zero;
+                rb.velocity = Vector2.zero; // Остановка перед атакой
                 animator.SetTrigger("CanChargedAttack");
                 animator.SetTrigger("Attack");
-
             }
         }
     }
@@ -76,4 +83,6 @@ public class GoblinKing_Run : StateMachineBehaviour
         animator.ResetTrigger("CanChargedAttack");
         rb.velocity = Vector2.zero; // Остановка при выходе из состояния
     }
+
+    
 }

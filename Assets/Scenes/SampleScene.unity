@@ -122,11 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &2050356 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1224140359489837472, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-  m_PrefabInstance: {fileID: 6351879295246196422}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &43933556 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4892877815288036146, guid: ef94de427962ca24cb333b9b3bd69433, type: 3}
@@ -13391,7 +13386,7 @@ GameObject:
   - component: {fileID: 1829396902}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25468,30 +25463,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114929281467840330, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114929281467840330, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114929281467840330, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114929281467840330, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114929281467840330, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114929281467840330, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 300498207764472361, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
       propertyPath: hpBar
       value: 
@@ -25508,40 +25479,16 @@ PrefabInstance:
       propertyPath: camerAnim
       value: 
       objectReference: {fileID: 519420034}
-    - target: {fileID: 1222985239002621474, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: wavePoint
-      value: 
-      objectReference: {fileID: 2050356}
-    - target: {fileID: 1222985239002621474, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: attackRange
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1222985239002621474, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: enragedAttackDamage
-      value: 3
+    - target: {fileID: 2420740850910839400, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4254667392441347421, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
       propertyPath: m_Name
       value: BossTent
       objectReference: {fileID: 0}
-    - target: {fileID: 4254667392441347421, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328509861560041279, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4328509861560041279, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7032450559528596941, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 643500dca759aba4fbefffa4abe860ec, type: 3}
-    - target: {fileID: 7032450559528596941, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
-      propertyPath: m_Enabled
+    - target: {fileID: 6281739065125130042, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7525223991810305148, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
@@ -25586,7 +25533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8716370851945836287, guid: ccd20f110a766bf4bbd987d093dcb2fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25678,10 +25625,10 @@ PrefabInstance:
       addedObject: {fileID: 1233500238}
     - targetCorrespondingSourceObject: {fileID: 4664139802895112712, guid: 44bf27b5d90b89e499dab82257e9f004, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1233500242}
+      addedObject: {fileID: 1233500243}
     - targetCorrespondingSourceObject: {fileID: 4664139802895112712, guid: 44bf27b5d90b89e499dab82257e9f004, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1233500243}
+      addedObject: {fileID: 1233500242}
   m_SourcePrefab: {fileID: 100100000, guid: 44bf27b5d90b89e499dab82257e9f004, type: 3}
 --- !u!1001 &7313846797847290568
 PrefabInstance:
@@ -25780,6 +25727,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2023645377533811130, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2085335692486232718, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
       propertyPath: m_Name
       value: EnemyPatrol
@@ -25795,6 +25746,10 @@ PrefabInstance:
     - target: {fileID: 3497813533788677271, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4030811196323332168, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7463768763350681574, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
       propertyPath: isPatrol
