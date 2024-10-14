@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEditor;
 using UnityEngine;
 
 public class KnifeThrow : MonoBehaviour
 {
+    [SerializeField] int damage;
+
     public float lifetime = 5f; // Время жизни ножа
     private Rigidbody2D rb;
-
-    
+    private Health enemyHealth;
     private int newLayer; // Номер нового слоя
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,7 +30,11 @@ public class KnifeThrow : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
+            
             Debug.Log("Knife hit the enemy!"); // Логируем попадание по врагу
+             
+            enemyHealth = collision.GetComponent<Health>();
+            enemyHealth.TakeDamage(damage);
             Destroy(gameObject); // Уничтожаем нож
         }
     }
