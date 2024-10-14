@@ -37,11 +37,14 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-        
-        collision.gameObject.GetComponentInParent<Health>().TakeDamage(damage);
+            collision.gameObject.GetComponentInParent<Health>().TakeDamage(damage);
             hit = true;
             boxCollider.enabled = false;
-        Deactivate();
+            Deactivate();
+        }
+        if (collision.CompareTag("Ground"))
+        {
+            Deactivate();
         }
         
 

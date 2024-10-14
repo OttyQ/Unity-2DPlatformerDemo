@@ -18,28 +18,43 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashCooldown = 1f;
     private bool isDashing = false;
     private bool canDash = true;
-    
+    [SerializeField] private GameObject gameManager;
+    private PauseMenu pauseMenu;
+
     private void OnDisable(){
         body.velocity = Vector2.zero;
         animator.SetBool("grounded", true);
     }
 
+    private void Start()
+    {
+        pauseMenu = gameManager.GetComponent<PauseMenu>();
+    }
+
     void FixedUpdate(){
-         GroundCheck();
-         HandleJump();
-        
-         animator.SetBool("isRun", horizontalInput!=0);
-         animator.SetBool("grounded", grounded);
-         
+        //pause check
+        if (!pauseMenu.isPause)
+        {
+            GroundCheck();
+            HandleJump();
+
+            animator.SetBool("isRun", horizontalInput != 0);
+            animator.SetBool("grounded", grounded);
+        }
     }
     private void Update(){
-        HandleXMove();
-        bodyFlip();
+        //pause check
+        if (!pauseMenu.isPause)
+        {
+            HandleXMove();
+            bodyFlip();
 
-        if(Input.GetKeyDown(KeyCode.LeftShift)&& !isDashing && canDash){
-            
-            animator.SetTrigger("Dashing");
-            StartCoroutine(Dash());
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && canDash)
+            {
+
+                animator.SetTrigger("Dashing");
+                StartCoroutine(Dash());
+            }
         }
     }
 

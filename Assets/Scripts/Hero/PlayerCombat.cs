@@ -10,7 +10,9 @@ public class PlayerCombat : MonoBehaviour
     [Header ("References")]
     public Animator animator;
     [SerializeField] private BoxCollider2D AttackboxCollider;
-    [SerializeField] private LayerMask enemyLayer; 
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private GameObject gameManager;
+    private PauseMenu pauseMenu;
 
     private float cooldownTimer = Mathf.Infinity;
 
@@ -20,14 +22,21 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float range;
     [SerializeField] private float attackCooldown;
     [SerializeField] private float colliderDistance;
-    
 
 
+    private void Start()
+    {
+        pauseMenu = gameManager.GetComponent<PauseMenu>();
+    }
     void Update(){
-        cooldownTimer += Time.deltaTime;
-        if(Input.GetMouseButtonDown(0) && cooldownTimer >= attackCooldown ){
-            cooldownTimer = 0;
-            Attack();
+        if (!pauseMenu.isPause)
+        {
+            cooldownTimer += Time.deltaTime;
+            if (Input.GetMouseButtonDown(0) && cooldownTimer >= attackCooldown)
+            {
+                cooldownTimer = 0;
+                Attack();
+            }
         }
     }
 

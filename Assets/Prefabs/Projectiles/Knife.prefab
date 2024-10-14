@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2810176212579586348}
   - component: {fileID: 2357217984522697122}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 4161479221340228550}
   - component: {fileID: 6205768340762984651}
   - component: {fileID: 4444962692612804366}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Knife
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.000456281, y: -0.07643895}

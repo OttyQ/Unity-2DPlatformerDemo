@@ -6,12 +6,18 @@ public class GoblinKing_Attack : MonoBehaviour
 {
 
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator bossAnim;
+
     [Header("Attack parameters")]
     [SerializeField] int attackDamage = 1;
-    [SerializeField] int enragedAttackDamage = 2;
-    [SerializeField] float attackRange;
+    [SerializeField] private BoxCollider2D attackCollider;
+
+    [Header("Camera parameters")]
     [SerializeField] Animator camerAnim;
-    [SerializeField] Animator bossAnim;
+
+    [Header("Charged Attack parameters")]
+    [SerializeField] int enragedAttackDamage = 2;
+    [SerializeField] private BoxCollider2D chAttackCollider;
 
     [Header("Wave parameters")]
     [SerializeField] Transform wavePoint; //точка от которой будет идти волна
@@ -28,57 +34,35 @@ public class GoblinKing_Attack : MonoBehaviour
     public void Attack()
     {
         //position of attack collider
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
-
-        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        Collider2D colInfo = Physics2D.OverlapBox(attackCollider.bounds.center, attackCollider.bounds.size, 0, attackMask);
         if (colInfo != null)
         {
-            //colInfo.GetComponentInParent<Health>().TakeDamage(attackDamage);
+            
             playerHealth = colInfo.GetComponentInParent<Health>();
             playerHealth.TakeDamage(attackDamage);
-            if (playerHealth.currentHealth <= 0)
-            {
-                bossAnim.SetTrigger("Win");
-            }
-        }
-    }
 
-    public void Update()
-    {
-        
+            WinAnim();
+        }
     }
 
     public void EnrageAttack()
     {
-        
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
-        camerAnim.SetTrigger("Shake");
 
-        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        Collider2D colInfo = Physics2D.OverlapBox(chAttackCollider.bounds.center, chAttackCollider.bounds.size, 0, attackMask);
         if (colInfo != null)
         {
 
             playerHealth = colInfo.GetComponentInParent<Health>();
             playerHealth.TakeDamage(enragedAttackDamage);
-            if(playerHealth.currentHealth <= 0)
-            {
-                bossAnim.SetTrigger("Win");
-            }
+
+            WinAnim();
         }
         
     }
 
     void OnDrawGizmosSelected()
     {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
-
-        Gizmos.DrawWireSphere(pos, attackRange);
+       
     }
 
     public void WaveAfterAttack()
@@ -86,9 +70,14 @@ public class GoblinKing_Attack : MonoBehaviour
         //wave logic
         wave.transform.position = wavePoint.position;
         Debug.Log("Transform pos: " + Mathf.Sign(transform.position.x));
-        wave.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
-        
-       
-        
+        wave.GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));     
+    }
+
+    private void WinAnim()
+    {
+        if (playerHealth.currentHealth <= 0)
+        {
+            bossAnim.SetTrigger("Win");
+        }
     }
 }
