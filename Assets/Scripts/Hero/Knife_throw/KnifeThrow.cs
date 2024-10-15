@@ -7,36 +7,50 @@ using UnityEngine;
 public class KnifeThrow : MonoBehaviour
 {
     [SerializeField] int damage;
+    [SerializeField] Animator KnifeAnim;
 
     public float lifetime = 5f; // Время жизни ножа
     private Rigidbody2D rb;
     private Health enemyHealth;
     private int newLayer; // Номер нового слоя
+   
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifetime); // Уничтожаем нож через заданное время
         //newLayer = LayerMask.NameToLayer(newLayerName); // Получаем номер слоя по имени
+        if (KnifeAnim == null)
+        {
+            KnifeAnim = GetComponent<Animator>();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground"))
         {
+            rb.velocity = Vector3.zero;
             //StickKnife(); // При столкновении со стеной прикрепляем нож
             Debug.Log("Knife stick at wall!");
-            Destroy(gameObject);
+            KnifeAnim.SetTrigger("Destroy");
+            
         }
 
         if (collision.CompareTag("Enemy"))
         {
             
             Debug.Log("Knife hit the enemy!"); // Логируем попадание по врагу
-             
+            rb.velocity = Vector3.zero;
             enemyHealth = collision.GetComponent<Health>();
             enemyHealth.TakeDamage(damage);
-            Destroy(gameObject); // Уничтожаем нож
+            KnifeAnim.SetTrigger("Destroy");
+            
         }
+    }
+
+    public void HandleDestroy()
+    {
+        Destroy(gameObject);
     }
 
     //Втыкание ножа в стену

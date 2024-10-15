@@ -3789,7 +3789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KnifePrefab: {fileID: 5072443086672146834, guid: 9ce94662ca145d545b081d16abc8219f, type: 3}
   KnifeSpeed: 10
-  KnifeCooldown: 3
+  KnifeCooldown: 0
 --- !u!1 &1287757706
 GameObject:
   m_ObjectHideFlags: 0
