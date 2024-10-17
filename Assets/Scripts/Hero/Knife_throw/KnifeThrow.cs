@@ -38,11 +38,13 @@ public class KnifeThrow : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            
-            Debug.Log("Knife hit the enemy!"); // Логируем попадание по врагу
             rb.velocity = Vector3.zero;
             enemyHealth = collision.GetComponent<Health>();
-            enemyHealth.TakeDamage(damage);
+            if (enemyHealth == null)
+            {
+                enemyHealth = collision.GetComponentInParent<Health>();
+            }
+            if(enemyHealth != null) enemyHealth.TakeDamage(damage);
             KnifeAnim.SetTrigger("Destroy");
             
         }

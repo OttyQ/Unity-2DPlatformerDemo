@@ -6,6 +6,9 @@ using UnityEngine.UIElements;
 public class KnifeCreate : MonoBehaviour
 {
     public GameObject KnifePrefab;
+    private Vector2 newPos;
+    [Header("Knife params")]
+    public bool canThrowKnife = false;
     [SerializeField] private float KnifeSpeed = 10f;
     [SerializeField] private float KnifeCooldown = 1f;
     private float nextKnifeTime = 0f;
@@ -14,11 +17,12 @@ public class KnifeCreate : MonoBehaviour
     void Start()
     {
         playerTransform = GetComponent<Transform>();
+        
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && Time.time >= nextKnifeTime)
+        if (Input.GetKeyDown(KeyCode.F) && Time.time >= nextKnifeTime && canThrowKnife)
         {
             ThrowKnife(); 
             nextKnifeTime = Time.time + KnifeCooldown;
@@ -28,7 +32,9 @@ public class KnifeCreate : MonoBehaviour
     void ThrowKnife()
     {
         // Создаём экземпляр ножа
-        GameObject knife = Instantiate(KnifePrefab, transform.position, transform.rotation);
+        newPos = transform.position;
+        newPos.y -= 0.5f;
+        GameObject knife = Instantiate(KnifePrefab, newPos, transform.rotation);
         Rigidbody2D knifeRb = knife.GetComponent<Rigidbody2D>();
 
         if (knifeRb != null)

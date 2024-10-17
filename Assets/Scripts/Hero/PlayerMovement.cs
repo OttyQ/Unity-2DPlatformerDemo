@@ -13,11 +13,13 @@ public class PlayerMovement : MonoBehaviour
     public bool grounded;
     float horizontalInput;
     public Animator animator;
-    //dash parametres
+
+    [Header ("Dash params")]
+    private bool isDashing = false;
+    public bool canDash = true;
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCooldown = 1f;
-    private bool isDashing = false;
-    private bool canDash = true;
+    
     [SerializeField] private GameObject gameManager;
     private PauseMenu pauseMenu;
 
