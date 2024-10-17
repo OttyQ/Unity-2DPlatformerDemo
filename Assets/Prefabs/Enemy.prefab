@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4569973671744527596}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6548280060623365992}
   m_Layer: 8
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,14 +175,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad39c2e2438ae24f87f8d572acc537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShake: 0
   startingHealth: 3
   animator: {fileID: 6941636635844694368}
+  canRevive: 0
+  canEnrage: 0
+  reviveDelay: 0
+  isInvulnerable: 0
   iFrameDuration: 0
   numberOfFlashes: 0
   spriteRend: {fileID: 0}
   components:
   - {fileID: 6548280060623365992}
   - {fileID: 0}
+  activateRespawn:
+    m_PersistentCalls:
+      m_Calls: []
+  cameraAnim: {fileID: 0}
 --- !u!114 &6548280060623365992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +214,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  isPatrol: 0
   enemyPatrol: {fileID: 0}
 --- !u!1 &4656364407127566904
 GameObject:
@@ -219,7 +229,7 @@ GameObject:
   - component: {fileID: 1516377183144526898}
   m_Layer: 8
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -16,7 +16,8 @@ public class PlayerCombat : MonoBehaviour
 
     private float cooldownTimer = Mathf.Infinity;
 
-    [Header ("Attack parameters")]
+    [Header("Attack parameters")]
+    public bool canAttack = false;
     private Health enemyHealth;
     [SerializeField] private int damage;
     [SerializeField] private float range;
@@ -32,7 +33,7 @@ public class PlayerCombat : MonoBehaviour
         if (!pauseMenu.isPause)
         {
             cooldownTimer += Time.deltaTime;
-            if (Input.GetMouseButtonDown(0) && cooldownTimer >= attackCooldown)
+            if (Input.GetMouseButtonDown(0) && cooldownTimer >= attackCooldown && canAttack)
             {
                 cooldownTimer = 0;
                 Attack();

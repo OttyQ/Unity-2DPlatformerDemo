@@ -3788,8 +3788,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KnifePrefab: {fileID: 5072443086672146834, guid: 9ce94662ca145d545b081d16abc8219f, type: 3}
+  canThrowKnife: 0
   KnifeSpeed: 10
-  KnifeCooldown: 0
+  KnifeCooldown: 2
 --- !u!1 &1287757706
 GameObject:
   m_ObjectHideFlags: 0
@@ -25644,6 +25645,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3831260831326276769, guid: 44bf27b5d90b89e499dab82257e9f004, type: 3}
+      propertyPath: canDash
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831260831326276769, guid: 44bf27b5d90b89e499dab82257e9f004, type: 3}
       propertyPath: dashForce
       value: 15
       objectReference: {fileID: 0}
@@ -25785,7 +25790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2085335692486232718, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2606166559003452034, guid: bfa5cd7e32bdeb24b8d040591d906fba, type: 3}
       propertyPath: m_LocalPosition.x

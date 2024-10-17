@@ -7,11 +7,12 @@ TagManager:
   - Ladder
   - Ground
   - Enemy
+  - Knife
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Knife
   - Water
   - UI
   - Ground
