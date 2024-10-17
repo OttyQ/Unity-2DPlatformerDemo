@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class KnifeCreate : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class KnifeCreate : MonoBehaviour
 
     void Start()
     {
-        playerTransform = transform;
+        playerTransform = GetComponent<Transform>();
     }
 
     void Update()
@@ -26,14 +27,24 @@ public class KnifeCreate : MonoBehaviour
 
     void ThrowKnife()
     {
+        // Создаём экземпляр ножа
         GameObject knife = Instantiate(KnifePrefab, transform.position, transform.rotation);
         Rigidbody2D knifeRb = knife.GetComponent<Rigidbody2D>();
 
         if (knifeRb != null)
         {
             knifeRb.gravityScale = 0;
+
+            // Определяем направление на основе поворота персонажа
             float direction = playerTransform.localScale.x > 0 ? 1f : -1f;
+
+            // Задаём скорость ножа
             knifeRb.velocity = new Vector2(direction * KnifeSpeed, 0);
+
+            // Переворачиваем нож в правильном направлении
+            Vector3 knifeScale = knife.transform.localScale;
+            knifeScale.x = Mathf.Abs(knifeScale.x) * direction;
+            knife.transform.localScale = knifeScale;
         }
     }
 }

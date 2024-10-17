@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2810176212579586348}
   - component: {fileID: 2357217984522697122}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,9 @@ Transform:
   m_GameObject: {fileID: 1777934302563495036}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.033, z: 0}
-  m_LocalScale: {x: 2, y: 11.219772, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -0.005, y: 0.033, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3857748588197405769}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +96,8 @@ GameObject:
   - component: {fileID: 4161479221340228550}
   - component: {fileID: 6205768340762984651}
   - component: {fileID: 4444962692612804366}
-  m_Layer: 6
+  - component: {fileID: 8525199592451053115}
+  m_Layer: 7
   m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.799575, y: 0.026664369, z: -4.3835883}
-  m_LocalScale: {x: 7.92, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2810176212579586348}
@@ -178,18 +179,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000456281, y: -0.07643895}
+  m_Offset: {x: 0.055957556, y: -0.02566623}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.07, y: 0.07}
+    newSize: {x: 0.07, y: 0.07}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14105673, y: 0.12503728}
+  m_Size: {x: 0.30465746, y: 0.06016101}
   m_EdgeRadius: 0
 --- !u!114 &4444962692612804366
 MonoBehaviour:
@@ -203,4 +204,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c374c2a73f8f9449beed65942788a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 3
+  KnifeAnim: {fileID: 8525199592451053115}
   lifetime: 2
+--- !u!95 &8525199592451053115
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072443086672146834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8792305d00a06bb49ae2ebd135c5f4bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
