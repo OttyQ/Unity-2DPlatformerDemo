@@ -7,23 +7,32 @@ public class KnifeCreate : MonoBehaviour
 {
     public GameObject KnifePrefab;
     private Vector2 newPos;
+
     [Header("Knife params")]
     public bool canThrowKnife = false;
     [SerializeField] private float KnifeSpeed = 10f;
     [SerializeField] private float KnifeCooldown = 1f;
     private float nextKnifeTime = 0f;
-    private Transform playerTransform; 
+    private Transform playerTransform;
+
+    [SerializeField] SFX_Hero sfx_hero;
+
+    [SerializeField] private GameObject gameManager;
+    private PauseMenu pauseMenu;
+
+
 
     void Start()
     {
         playerTransform = GetComponent<Transform>();
-        
+        pauseMenu = gameManager.GetComponent<PauseMenu>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && Time.time >= nextKnifeTime && canThrowKnife)
+        if (Input.GetKeyDown(KeyCode.F) && Time.time >= nextKnifeTime && canThrowKnife && !pauseMenu.isPause)
         {
+            sfx_hero.Hero_throw_knife();
             ThrowKnife(); 
             nextKnifeTime = Time.time + KnifeCooldown;
         }

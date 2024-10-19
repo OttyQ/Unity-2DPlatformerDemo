@@ -12,6 +12,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private BoxCollider2D AttackboxCollider;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private GameObject gameManager;
+    [SerializeField] private SFX_Hero sfx_hero;
     private PauseMenu pauseMenu;
 
     private float cooldownTimer = Mathf.Infinity;
@@ -53,6 +54,7 @@ public class PlayerCombat : MonoBehaviour
 
         if(hit.collider != null){
             enemyHealth = hit.transform.GetComponent<Health>();
+            sfx_hero.Hero_hit();
         }
 
         return hit.collider!=null;
