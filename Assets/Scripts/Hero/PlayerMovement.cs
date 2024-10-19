@@ -22,7 +22,12 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private GameObject gameManager;
     private PauseMenu pauseMenu;
+    [SerializeField] private SFX_Hero sfx_hero;
 
+   
+   
+
+    
     private void OnDisable(){
         body.velocity = Vector2.zero;
         animator.SetBool("grounded", true);
@@ -41,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             HandleJump();
 
             animator.SetBool("isRun", horizontalInput != 0);
+            
             animator.SetBool("grounded", grounded);
         }
     }
@@ -53,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && canDash)
             {
-
+                
                 animator.SetTrigger("Dashing");
                 StartCoroutine(Dash());
             }
@@ -65,12 +71,12 @@ public class PlayerMovement : MonoBehaviour
         if(!isDashing){
             horizontalInput = Input.GetAxis("Horizontal");
             body.velocity = new Vector2(horizontalInput * speed,body.velocity.y);
-            
         }
     }
 
     void HandleJump(){
         if(Input.GetKey(KeyCode.Space) && grounded){
+            sfx_hero.Hero_jump_start();
             body.velocity = new Vector2(body.velocity.x, jumpForce);
             //animator.SetTrigger("Jump");
             grounded = false;
@@ -104,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
 
     void GroundCheck(){
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+        
         //Debug.Log("Animator set grounded = " + grounded);
     }
     

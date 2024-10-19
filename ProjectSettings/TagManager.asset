@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Enemy
   - Knife
+  - Audio
   layers:
   - Default
   - TransparentFX

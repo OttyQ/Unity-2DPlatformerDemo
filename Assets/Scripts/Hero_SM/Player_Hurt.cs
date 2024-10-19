@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Player_Hurt : StateMachineBehaviour
 {
+    private SFX_Hero sfx_hero;
+
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        sfx_hero = animator.GetComponent<SFX_Hero>();
         animator.GetComponent<Health>().isInvulnerable = true;
+        sfx_hero.Hero_hurt();
     }
 
     //// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
