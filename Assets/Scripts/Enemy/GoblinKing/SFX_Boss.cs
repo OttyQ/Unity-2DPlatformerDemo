@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SFX_Boss : MonoBehaviour
 {
-    [Header("Audio Clip")]
+    [Header("Audio Clip SFX")]
     public AudioClip boss_walk;
     public AudioClip boss_attack;
     public AudioClip boss_special_attack;
@@ -12,6 +12,10 @@ public class SFX_Boss : MonoBehaviour
     public AudioClip boss_hurt_2;
     public AudioClip boss_charge;
     public AudioClip boss_die;
+    public AudioClip boss_win;
+
+    [Header("Audio Clip SFX")]
+    public AudioClip boss_theme;
 
 
     AudioManager audioManager;
@@ -53,5 +57,20 @@ public class SFX_Boss : MonoBehaviour
     public void Boss_charge()
     {
         audioManager.PlaySFX(boss_charge);
+    }
+    
+    public void Boss_win()
+    {
+        audioManager.PlaySFX(boss_win);
+    }
+
+    public void Boss_theme()
+    {
+        audioManager.ActivateTheme(boss_theme);
+    }
+
+    public void Boss_theme_end()
+    {
+        audioManager.ActivateTheme(audioManager.background);
     }
 }

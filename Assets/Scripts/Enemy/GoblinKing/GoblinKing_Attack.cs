@@ -47,7 +47,7 @@ public class GoblinKing_Attack : MonoBehaviour
 
     public void EnrageAttack()
     {
-
+        camerAnim.SetTrigger("Shake");
         Collider2D colInfo = Physics2D.OverlapBox(chAttackCollider.bounds.center, chAttackCollider.bounds.size, 0, attackMask);
         if (colInfo != null)
         {

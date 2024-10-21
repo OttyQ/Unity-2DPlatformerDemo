@@ -11,7 +11,7 @@ public class Spawning : MonoBehaviour
 
 
 
-    Vector2 CheckPointPos;
+    public Vector2 CheckPointPos { get; private set; }
     public PlayerMovement hero;
     public void Start()
     {

@@ -10,6 +10,7 @@ public class CheckPoint : MonoBehaviour
     [SerializeField] private Sprite ActivatedShrineSprite;
     [Header ("Particle")]
     [SerializeField] private GameObject effect;
+
     private SFX_Shrine sfx_shrine;
 
     private void Start()
@@ -18,13 +19,30 @@ public class CheckPoint : MonoBehaviour
     }
     public void NewCheckPointSet()
     {
-        Instantiate(effect, transform.position, Quaternion.identity);//particle activation
-
         if (HeroSpawnGameController != null)
         {
-           HeroSpawnGameController.UpdateCheckPoint(transform.position);
-           sfx_shrine.Shrine_Activate();
-           ShrineSpriteRenderer.sprite = ActivatedShrineSprite; //shrine sprite change to activated
+            Vector2 curCheck = transform.position;
+            if (HeroSpawnGameController.CheckPointPos != curCheck)
+            {
+                Instantiate(effect, transform.position, Quaternion.identity);//particle activation
+                HeroSpawnGameController.UpdateCheckPoint(transform.position);
+                sfx_shrine.Shrine_Activate();
+                ShrineSpriteRenderer.sprite = ActivatedShrineSprite; //shrine sprite change to activated
+            } 
+            else
+            {
+                Instantiate(effect, transform.position, Quaternion.identity);//particle activation
+                sfx_shrine.Shrine_Activate_alt();
+            }
         }
+            
+
+        
+        
+
+        
+        
+           
+        
     }
 }

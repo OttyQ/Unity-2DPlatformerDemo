@@ -113,5 +113,10 @@ public class PlayerMovement : MonoBehaviour
         
         //Debug.Log("Animator set grounded = " + grounded);
     }
+
+    public void DashEnable()
+    {
+        canDash = true;
+    }
     
 }

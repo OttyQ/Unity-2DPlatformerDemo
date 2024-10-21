@@ -17,6 +17,8 @@ public class SFX_Hero : MonoBehaviour
     public AudioClip hero_dash;
     public AudioClip hero_hit;
     public AudioClip hero_revive;
+    public AudioClip hero_dash_upgrade;
+    public AudioClip hero_knife_upgrade;
     AudioManager audioManager;
 
     private void Awake()
@@ -72,6 +74,16 @@ public class SFX_Hero : MonoBehaviour
     {
         //do
         audioManager.PlaySFX(hero_revive);
+    }
+
+    public void Hero_dash_upgrade()
+    {
+        audioManager.PlaySFX(hero_dash_upgrade);
+    }
+
+    public void Hero_knife_upgrade()
+    {
+        audioManager.PlaySFX(hero_knife_upgrade);
     }
 
 

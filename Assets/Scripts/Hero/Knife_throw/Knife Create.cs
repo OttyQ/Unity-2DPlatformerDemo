@@ -62,4 +62,9 @@ public class KnifeCreate : MonoBehaviour
             knife.transform.localScale = knifeScale;
         }
     }
+
+    public void KnifeEnable()
+    {
+        canThrowKnife = true;
+    }
 }

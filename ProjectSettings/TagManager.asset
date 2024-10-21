@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Knife
   - Audio
+  - Upgrade_sword
+  - Upgrade_dash
+  - Upgrade_knife
   layers:
   - Default
   - TransparentFX

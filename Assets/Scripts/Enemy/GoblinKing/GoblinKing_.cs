@@ -10,9 +10,15 @@ public class GoblinKing_ : MonoBehaviour
     [SerializeField] GameObject hpBar;
     public bool isFlipped = false;
     Rigidbody2D rb;
+    private SFX_Boss sfx_boss;
 
+    private void Awake()
+    {
+        sfx_boss = GetComponent<SFX_Boss>();
+    }
     private void OnEnable()
     {
+        sfx_boss.Boss_theme();
         hpBar.SetActive(true);
     }
     

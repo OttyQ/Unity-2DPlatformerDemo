@@ -71,4 +71,9 @@ public class PlayerCombat : MonoBehaviour
             enemyHealth.TakeDamage(damage);
         }
     }
+
+    public void AttackEnable()
+    {
+        canAttack = true;
+    }
 }
