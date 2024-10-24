@@ -738,14 +738,14 @@ MonoBehaviour:
   m_text: SFX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
-  m_sharedMaterial: {fileID: -8491633426936416172, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
+  m_sharedMaterial: {fileID: 8269269179104087257, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -957,8 +957,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 472621645}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0.1388998, y: -0.8999939}
   m_SizeDelta: {x: 0.2596, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1268,6 +1268,7 @@ RectTransform:
   - {fileID: 1380662216}
   - {fileID: 472621645}
   - {fileID: 197145322}
+  - {fileID: 1614377047}
   m_Father: {fileID: 1502995236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1320,9 +1321,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 542136330}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1330,6 +1331,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
         m_MethodName: OnSliderChanged
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1068701757}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+        m_MethodName: SetSFX
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1351,6 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueText: {fileID: 1835225204}
+  slider: {fileID: 822162554}
 --- !u!1 &849939988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,13 +1394,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1009411315}
-  - {fileID: 1578503707}
   - {fileID: 1076252023}
   m_Father: {fileID: 1068701756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34600002, y: 0.5171482}
   m_AnchorMax: {x: 0.6535209, y: 0.94000006}
-  m_AnchoredPosition: {x: -91, y: 94}
+  m_AnchoredPosition: {x: -52, y: 94}
   m_SizeDelta: {x: -490, y: -356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &853092608
@@ -1460,8 +1473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172, y: 62.80285}
-  m_SizeDelta: {x: 77.7185, y: -19.4664}
+  m_AnchoredPosition: {x: -128.67686, y: 62.80285}
+  m_SizeDelta: {x: 93.7648, y: -19.4664}
   m_Pivot: {x: 0.5, y: 0.81194335}
 --- !u!114 &887322953
 MonoBehaviour:
@@ -1486,14 +1499,14 @@ MonoBehaviour:
   m_text: Music
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
-  m_sharedMaterial: {fileID: -8491633426936416172, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
+  m_sharedMaterial: {fileID: 8269269179104087257, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1520,7 +1533,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 5.37
+  m_characterSpacing: 6.4
   m_wordSpacing: 0
   m_lineSpacing: -0.3
   m_lineSpacingMax: 0
@@ -2016,7 +2029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.323, y: 0.007}
   m_AnchorMax: {x: 0.6777708, y: 0.99537045}
-  m_AnchoredPosition: {x: -1, y: -0.000061035156}
+  m_AnchoredPosition: {x: -1, y: -0.00012207031}
   m_SizeDelta: {x: -501, y: -784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932451740
@@ -2091,6 +2104,7 @@ RectTransform:
   - {fileID: 178122127}
   - {fileID: 1418234090}
   - {fileID: 2072003052}
+  - {fileID: 1578503707}
   m_Father: {fileID: 849939989}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2143,9 +2157,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1705536709}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 10
+  m_WholeNumbers: 1
+  m_Value: 5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2153,6 +2167,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SliderController, Assembly-CSharp
         m_MethodName: OnSliderChanged
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1068701757}
+        m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
+        m_MethodName: SetMusic
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2174,6 +2200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueText: {fileID: 1076252021}
+  slider: {fileID: 1009411316}
 --- !u!1 &1013287405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,6 +2285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1068701756}
+  - component: {fileID: 1068701757}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -2278,12 +2306,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 932451739}
-  - {fileID: 898584501}
   - {fileID: 1820332558}
   - {fileID: 1751966602}
   - {fileID: 849939989}
   - {fileID: 1502995236}
   - {fileID: 119107901}
+  - {fileID: 898584501}
   m_Father: {fileID: 1858149383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2291,6 +2319,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1068701757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068701755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78cddd75d11c6c46a8f080b4119110d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMix: {fileID: 24100000, guid: 1b358efb755a47145a2787343b5b4358, type: 2}
+  musicSlider: {fileID: 1009411316}
+  sfxSlider: {fileID: 822162554}
 --- !u!1 &1076252020
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2347,7 @@ GameObject:
   - component: {fileID: 1076252021}
   - component: {fileID: 1076252024}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Music Volume(TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2333,14 +2376,14 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
-  m_sharedMaterial: {fileID: -8491633426936416172, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
+  m_sharedMaterial: {fileID: 8269269179104087257, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3005,7 +3048,7 @@ RectTransform:
   m_Father: {fileID: 1380662216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 6.222702}
   m_SizeDelta: {x: 0, y: 13.2455}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3077,7 +3120,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 822162553}
-  - {fileID: 1614377047}
   - {fileID: 1835225202}
   m_Father: {fileID: 1068701756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3386,16 +3428,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578503706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.0748625, y: 10.0748625, z: 10.0748625}
+  m_LocalScale: {x: 3.3582876, y: 3.4731247, z: 7.119905}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 849939989}
+  m_Father: {fileID: 1009411315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -59.802917, y: -198.7}
+  m_AnchoredPosition: {x: 12.836487, y: -6.911789}
   m_SizeDelta: {x: 7.638, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578503708
@@ -3461,16 +3503,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614377046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -9, y: 9, z: 9}
+  m_LocalScale: {x: 4.3979673, y: 5.2986917, z: 4.3979673}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1502995236}
+  m_Father: {fileID: 822162553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.3, y: -122.8}
+  m_AnchoredPosition: {x: 2.3680482, y: -79.01192}
   m_SizeDelta: {x: 6.0956, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614377048
@@ -3537,10 +3579,10 @@ AudioSource:
   m_GameObject: {fileID: 1635816613}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2631277595703808848, guid: 1b358efb755a47145a2787343b5b4358, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.551
+  m_Volume: 1
   m_Pitch: 0.95
   Loop: 1
   Mute: 0
@@ -3672,7 +3714,7 @@ RectTransform:
   m_Father: {fileID: 178122127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -2.5}
   m_SizeDelta: {x: 0, y: 5.0001}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3746,8 +3788,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1418234090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4026,7 +4068,7 @@ GameObject:
   - component: {fileID: 1835225204}
   - component: {fileID: 1835225203}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SFX Volume(TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4087,14 +4129,14 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
-  m_sharedMaterial: {fileID: -8491633426936416172, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
+  m_sharedMaterial: {fileID: 8269269179104087257, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4618,10 +4660,10 @@ AudioSource:
   m_GameObject: {fileID: 2101663195}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1512335290040689977, guid: 1b358efb755a47145a2787343b5b4358, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.551
+  m_Volume: 1
   m_Pitch: 0.95
   Loop: 1
   Mute: 0
@@ -4806,6 +4848,38 @@ PrefabInstance:
     - target: {fileID: 1530308107130901233, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
       propertyPath: transitionTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontSize
+      value: 36.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8269269179104087257, guid: fa7abd15fa4fc5745a9205fee5585d6f, type: 2}
+    - target: {fileID: 2083100861570679871, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2333014078134291647, guid: c99938f04b6cd804abcb8bb813b52d5e, type: 3}
       propertyPath: m_Name

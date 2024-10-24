@@ -1,16 +1,18 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class SliderController : MonoBehaviour
 {
     public TMP_Text valueText;
+    public Slider slider;
 
+    private void Start()
+    {
+        valueText.text = slider.value.ToString();
+    }
     public void OnSliderChanged(float value)
     {
-        float curVal = value * 10f;
-
-        
-        int roundedVal = Mathf.RoundToInt(curVal);
-        valueText.text = roundedVal.ToString();
+        valueText.text = value.ToString();
     }
 }
