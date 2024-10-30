@@ -29,11 +29,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void Pause()
     {
-        Debug.Log("Pause start");
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPause = true;
-
+        if (!isPause)
+        {
+            Debug.Log("Pause start");
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+            isPause = true;
+        }
     }
 
     public void Resume()

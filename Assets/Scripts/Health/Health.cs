@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float reviveDelay;
     public bool isInvulnerable;
     public float currentHealth {get; private set;}
-    private bool dead;
+    public bool dead;
 
     [Header ("IFrames")]
     [SerializeField] private float iFrameDuration;
@@ -27,8 +27,12 @@ public class Health : MonoBehaviour
     [SerializeField] private Behaviour[] components;
     [SerializeField] UnityEvent activateRespawn;
     [SerializeField] Animator cameraAnim;
+
+    public dyingMenu dyingMenu;
+
     private void Awake(){
         currentHealth = startingHealth;
+        dyingMenu = FindObjectOfType<dyingMenu>();
     }
     public void TakeDamage(float _damage){
         if (isInvulnerable)
@@ -77,6 +81,7 @@ public class Health : MonoBehaviour
         }
         animator.SetTrigger("Die");
         dead = true;
+
     }
 
     private IEnumerator Revive(float delayTime)
@@ -109,4 +114,10 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 8, false);
 
     }
+
+    public void MenuAwake() // Метод вызывается в событии анимации
+    {
+        dyingMenu.MenuAwake(); // Вызов метода MenuAwake на объекте DyingMenu
+    }
+
 }
