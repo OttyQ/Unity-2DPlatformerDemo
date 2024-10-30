@@ -8,8 +8,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Clip")]
     public AudioClip background;
-
     [SerializeField] PauseMenu pauseMenu;
+
+    [Header("Menu AudioClip")]
+    public AudioClip buttonSelect;
+    public AudioClip buttonPress;
 
 
     private void Start()

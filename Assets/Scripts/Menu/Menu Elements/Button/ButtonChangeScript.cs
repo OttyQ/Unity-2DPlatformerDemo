@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using Unity.VisualScripting;
 
 public class ChangeButtonTexture : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
@@ -14,12 +13,31 @@ public class ChangeButtonTexture : MonoBehaviour, IPointerEnterHandler, IPointer
     private Vector3 buttonOriginalPos;
     private float buttonPressOffset = 10f; // Amount to move the button down when pressed
 
-    [Header ("Audio")]
-    private AudioManagerMenu audioManager;
+    [Header("Audio")]
+    private AudioManagerMenu audioManagerM;
+    private AudioManager audioManager;
 
     void Start()
     {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerMenu>();
+        GameObject audioObject = GameObject.FindGameObjectWithTag("Audio");
+        if (audioObject != null)
+        {
+            // Попытка получить AudioManagerMenu, затем AudioManager, если не найден AudioManagerMenu
+            audioManagerM = audioObject.GetComponent<AudioManagerMenu>();
+            if (audioManagerM == null)
+            {
+                audioManager = audioObject.GetComponent<AudioManager>();
+                if (audioManager == null)
+                {
+                    Debug.LogError("AudioManager и AudioManagerMenu не найдены на объекте с тегом 'Audio'");
+                }
+            }
+        }
+        else
+        {
+            Debug.LogError("Не найден объект с тегом 'Audio'");
+        }
+
         buttonImage = GetComponent<Image>();
         originalSprite = buttonImage.sprite;
         buttonOriginalPos = transform.position;
@@ -28,7 +46,7 @@ public class ChangeButtonTexture : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        audioManager.PlaySFX(audioManager.buttonSelect);
+        PlayAudio(audioManagerM?.buttonSelect, audioManager?.buttonSelect);
         arrows.SetActive(true);
         SetArrowsPosition(arrows); // Set arrows position when pointer enters the button
     }
@@ -40,7 +58,7 @@ public class ChangeButtonTexture : MonoBehaviour, IPointerEnterHandler, IPointer
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        audioManager.PlaySFX(audioManager.buttonPress);
+        PlayAudio(audioManagerM?.buttonPress, audioManager?.buttonPress);
         buttonImage.sprite = pressedSprite;
         SetButtonPosition(true);
         arrows.SetActive(false); // Hide the normal arrows GameObject
@@ -55,6 +73,18 @@ public class ChangeButtonTexture : MonoBehaviour, IPointerEnterHandler, IPointer
         arrows.SetActive(true); // Show the normal arrows GameObject
         arrowsPressed.SetActive(false); // Hide the pressed arrows GameObject
         SetArrowsPosition(arrows); // Set arrows position when button is released
+    }
+
+    private void PlayAudio(AudioClip clip1, AudioClip clip2)
+    {
+        if (audioManagerM != null && clip1 != null)
+        {
+            audioManagerM.PlaySFX(clip1);
+        }
+        else if (audioManager != null && clip2 != null)
+        {
+            audioManager.PlaySFX(clip2);
+        }
     }
 
     void SetArrowsPosition(GameObject arrows)

@@ -5,118 +5,111 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D body;
+    [SerializeField] private Rigidbody2D body;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
-    public BoxCollider2D groundCheck;// check for graound
-    public LayerMask groundMask; //what we check in groundCheck
-    public bool grounded;
-    float horizontalInput;
-    public Animator animator;
+    [SerializeField] private BoxCollider2D groundCheck;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject gameManager;
+    [SerializeField] private SFX_Hero sfxHero;
 
-    [Header ("Dash params")]
-    private bool isDashing = false;
-    public bool canDash = true;
+    private PauseMenu pauseMenu;
+    private float horizontalInput;
+    public bool grounded {  get; private set; }
+
+    [Header("Dash Parameters")]
+    private bool isDashing;
+    private bool canDash = false;
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCooldown = 1f;
-    
-    [SerializeField] private GameObject gameManager;
-    private PauseMenu pauseMenu;
-    [SerializeField] private SFX_Hero sfx_hero;
-
-   
-   
-
-    
-    private void OnDisable(){
-        body.velocity = Vector2.zero;
-        animator.SetBool("grounded", true);
-    }
 
     private void Start()
     {
         pauseMenu = gameManager.GetComponent<PauseMenu>();
     }
 
-    void FixedUpdate(){
-        //pause check
-        if (!pauseMenu.isPause)
-        {
-            GroundCheck();
-            HandleJump();
+    private void Update()
+    {
+        if (pauseMenu.isPause) return;
 
-            animator.SetBool("isRun", horizontalInput != 0);
-            
-            animator.SetBool("grounded", grounded);
-        }
-    }
-    private void Update(){
-        //pause check
-        if (!pauseMenu.isPause)
-        {
-            HandleXMove();
-            bodyFlip();
+        HandleMovementInput();
+        FlipCharacter();
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && canDash)
-            {
-                
-                animator.SetTrigger("Dashing");
-                StartCoroutine(Dash());
-            }
-        }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            StartCoroutine(Dash());
     }
 
+    private void FixedUpdate()
+    {
+        if (pauseMenu.isPause) return;
 
-    void HandleXMove(){
-        if(!isDashing){
+        CheckGroundStatus();
+        HandleJump();
+        animator.SetBool("isRun", Mathf.Abs(horizontalInput) > 0.01f);
+        animator.SetBool("grounded", grounded);
+    }
+
+    private void HandleMovementInput()
+    {
+        if (!isDashing)
+        {
             horizontalInput = Input.GetAxis("Horizontal");
-            body.velocity = new Vector2(horizontalInput * speed,body.velocity.y);
+            body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
         }
     }
 
-    void HandleJump(){
-        if(Input.GetKey(KeyCode.Space) && grounded){
-            sfx_hero.Hero_jump_start();
+    private void HandleJump()
+    {
+        if (Input.GetKey(KeyCode.Space) && grounded)
+        {
+            sfxHero.Hero_jump_start();
             body.velocity = new Vector2(body.velocity.x, jumpForce);
-            //animator.SetTrigger("Jump");
             grounded = false;
         }
     }
-    IEnumerator Dash(){
+
+    private IEnumerator Dash()
+    {
         isDashing = true;
         canDash = false;
-        animator.SetBool("isDashing", isDashing);
         float originalGravity = body.gravityScale;
         body.gravityScale = 0f;
-        float dashDuration = 0.2f; // Adjust as needed
         body.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
 
-        yield return new WaitForSeconds(dashDuration);
+        animator.SetBool("isDashing", isDashing);
+        animator.SetTrigger("Dashing");
+
+        yield return new WaitForSeconds(0.2f); // dash duration
+
         body.gravityScale = originalGravity;
         body.velocity = Vector2.zero;
         isDashing = false;
         animator.SetBool("isDashing", isDashing);
+
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
-    void bodyFlip(){ 
-        if(horizontalInput > 0.01f){
+
+    private void FlipCharacter()
+    {
+        if (horizontalInput > 0.01f)
             transform.localScale = Vector3.one;
-        } else if(horizontalInput < -0.01f){
-            transform.localScale = new Vector3(-1,1,1);
-        }
-        
+        else if (horizontalInput < -0.01f)
+            transform.localScale = new Vector3(-1, 1, 1);
     }
 
-    void GroundCheck(){
+    private void CheckGroundStatus()
+    {
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
-        
-        //Debug.Log("Animator set grounded = " + grounded);
     }
+
 
     public void DashEnable()
     {
         canDash = true;
     }
-    
+
+
 }
+

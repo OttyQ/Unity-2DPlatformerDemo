@@ -5,54 +5,51 @@ using UnityEngine.Events;
 
 public class Spawning : MonoBehaviour
 {
-    [SerializeField] float heightdie = -20f;
-    [Header ("Health")]
-    [SerializeField] UnityEvent heroHealth;
+    [SerializeField] private float heightDie = -20f;
 
-
+    [Header("Health")]
+    [SerializeField] private UnityEvent heroHealth;
 
     public Vector2 CheckPointPos { get; private set; }
-    public PlayerMovement hero;
-    public void Start()
+    private PlayerMovement hero;
+
+    private void Start()
     {
-
-        hero = GameObject.FindObjectOfType<PlayerMovement>();
-
+        hero = FindObjectOfType<PlayerMovement>();
         if (hero == null)
         {
             Debug.LogError("Hero not found!");
             return;
         }
+
         CheckPointPos = transform.position;
-        Debug.Log("Start position: " + CheckPointPos);                          
+        Debug.Log("Start position: " + CheckPointPos);
     }
 
-    void Update()
+    private void Update()
     {
-        Checkheight();
+        CheckHeight();
     }
 
-    public void Checkheight()
-    {            
-        if (transform.position.y < heightdie)
+    private void CheckHeight()
+    {
+        if (transform.position.y < heightDie)
         {
-            heroHealth.Invoke();                 
+            heroHealth?.Invoke();
         }
     }
+
     public void HandleRespawn()
     {
-        hero.body.velocity = Vector2.zero;
         transform.position = CheckPointPos;
     }
 
-    public void UpdateCheckPoint(Vector2 pos)
+    public void UpdateCheckPoint(Vector2 newCheckPointPos)
     {
-        if (CheckPointPos != pos)
+        if (CheckPointPos != newCheckPointPos)
         {
-            Debug.Log("Updating checkpoint to: " + pos);
-            CheckPointPos = pos;
+            Debug.Log("Updating checkpoint to: " + newCheckPointPos);
+            CheckPointPos = newCheckPointPos;
         }
     }
-
-    
 }

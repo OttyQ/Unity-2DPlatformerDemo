@@ -230,10 +230,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1194513811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -389}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchorMin: {x: 0.4233773, y: 0.08714788}
+  m_AnchorMax: {x: 0.57647926, y: 0.17944363}
+  m_AnchoredPosition: {x: 0, y: 7}
+  m_SizeDelta: {x: 206, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189365184
 MonoBehaviour:
@@ -1161,10 +1161,10 @@ RectTransform:
   - {fileID: 1728736615}
   m_Father: {fileID: 1194513811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 22}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.36664587, y: 0.08714788}
+  m_AnchorMax: {x: 0.63000005, y: 0.5694825}
+  m_AnchoredPosition: {x: 3, y: 207.5}
+  m_SizeDelta: {x: -406, y: -421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &809288097
 GameObject:
@@ -1434,10 +1434,10 @@ RectTransform:
   - {fileID: 480443974}
   m_Father: {fileID: 1194513811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 22}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.36664587, y: 0.08714788}
+  m_AnchorMax: {x: 0.63000005, y: 0.5824455}
+  m_AnchoredPosition: {x: 3, y: 200.5}
+  m_SizeDelta: {x: -406, y: -435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &887322951
 GameObject:
@@ -1871,10 +1871,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1194513811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchorMin: {x: 0.4233773, y: 0.34985214}
+  m_AnchorMax: {x: 0.57647926, y: 0.4331479}
+  m_AnchoredPosition: {x: 0, y: -3}
+  m_SizeDelta: {x: 206, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &930064708
 MonoBehaviour:
@@ -2029,7 +2029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.323, y: 0.007}
   m_AnchorMax: {x: 0.6777708, y: 0.99537045}
-  m_AnchoredPosition: {x: -1, y: -0.00012207031}
+  m_AnchoredPosition: {x: -1, y: 0}
   m_SizeDelta: {x: -501, y: -784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932451740
@@ -2592,10 +2592,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1194513811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchorMin: {x: 0.4233773, y: 0.4757395}
+  m_AnchorMax: {x: 0.57647926, y: 0.5694825}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 206, y: 49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164622446
 MonoBehaviour:
@@ -2777,10 +2777,10 @@ RectTransform:
   - {fileID: 800849066}
   m_Father: {fileID: 1858149383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1223410841
 GameObject:
@@ -3255,10 +3255,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1194513811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -257}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchorMin: {x: 0.4233773, y: 0.21473938}
+  m_AnchorMax: {x: 0.57647926, y: 0.30729577}
+  m_AnchoredPosition: {x: 0, y: 1}
+  m_SizeDelta: {x: 206, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570633145
 MonoBehaviour:
@@ -3564,7 +3564,7 @@ GameObject:
   - component: {fileID: 1635816615}
   - component: {fileID: 1635816614}
   m_Layer: 0
-  m_Name: SFX
+  m_Name: MM_SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4645,7 +4645,7 @@ GameObject:
   - component: {fileID: 2101663197}
   - component: {fileID: 2101663196}
   m_Layer: 0
-  m_Name: Music
+  m_Name: MM_Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
