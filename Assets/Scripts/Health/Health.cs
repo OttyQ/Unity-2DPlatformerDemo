@@ -15,32 +15,39 @@ public class Health : MonoBehaviour
     [SerializeField] private bool canEnrage;
     [SerializeField] private float reviveDelay;
     public bool isInvulnerable;
-    public float currentHealth {get; private set;}
-    private bool dead;
+    public float currentHealth { get; private set; }
+    public bool dead;
 
-    [Header ("IFrames")]
+    [Header("IFrames")]
     [SerializeField] private float iFrameDuration;
     [SerializeField] private float numberOfFlashes;
     [SerializeField] private SpriteRenderer spriteRend;
 
-    [Header ("Components")]
+    [Header("Components")]
     [SerializeField] private Behaviour[] components;
     [SerializeField] UnityEvent activateRespawn;
     [SerializeField] Animator cameraAnim;
-    private void Awake(){
+
+    public dyingMenu dyingMenu;
+
+    private void Awake()
+    {
         currentHealth = startingHealth;
+        dyingMenu = FindObjectOfType<dyingMenu>();
     }
-    public void TakeDamage(float _damage){
+    public void TakeDamage(float _damage)
+    {
         if (isInvulnerable)
         {
             return;
         }
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0 , startingHealth);
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
         Rigidbody2D playerRb = GetComponent<Rigidbody2D>();
 
-        if (currentHealth > 0){
+        if (currentHealth > 0)
+        {
             animator.SetBool("grounded", true);
-            if(canShake) cameraAnim.SetTrigger("Shake");
+            if (canShake) cameraAnim.SetTrigger("Shake");
             animator.SetTrigger("Hurt");
 
             Debug.Log("Current health: " + currentHealth + "StartingHealth/2: " + startingHealth / 2);
@@ -54,16 +61,19 @@ public class Health : MonoBehaviour
             isInvulnerable = false;
 
             //iframes
-        } else {
-            if(!dead){
+        }
+        else
+        {
+            if (!dead)
+            {
                 Die();
                 if (canRevive)
-                {   
+                {
                     StartCoroutine(Revive(reviveDelay));
                 }
             }
-            
-            
+
+
         }
 
 
@@ -77,6 +87,7 @@ public class Health : MonoBehaviour
         }
         animator.SetTrigger("Die");
         dead = true;
+
     }
 
     private IEnumerator Revive(float delayTime)
@@ -100,7 +111,7 @@ public class Health : MonoBehaviour
         //main logic
         for (int i = 0; i < numberOfFlashes; i++)
         {
-           
+
             spriteRend.color = new Color(1, 0, 0, 0.5f);
             yield return new WaitForSeconds(iFrameDuration / (numberOfFlashes * 2));
             spriteRend.color = Color.white;
@@ -109,4 +120,10 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 8, false);
 
     }
+
+    public void MenuAwake() // Метод вызывается в событии анимации
+    {
+        dyingMenu.MenuAwake(); // Вызов метода MenuAwake на объекте DyingMenu
+    }
+
 }

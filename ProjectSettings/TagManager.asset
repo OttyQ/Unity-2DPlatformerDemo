@@ -58,11 +58,11 @@ TagManager:
   - name: 4SeconBeckGround
     uniqueID: 514606149
     locked: 0
-  - name: BackGroundTile
-    uniqueID: 1834270311
-    locked: 0
   - name: Shrine
     uniqueID: 3700095363
+    locked: 0
+  - name: BackGroundTile
+    uniqueID: 1834270311
     locked: 0
   - name: Default
     uniqueID: 0

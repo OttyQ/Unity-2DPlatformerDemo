@@ -148,7 +148,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1879149797
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1436280309, guid: 16c44eac3130c72458a64448f74e0aa8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -176,6 +176,9 @@ GameObject:
   - component: {fileID: 5913923768860279730}
   - component: {fileID: 3312575090563061297}
   - component: {fileID: 4454213054220647095}
+  - component: {fileID: 1149685786601246312}
+  - component: {fileID: 2120670861809533880}
+  - component: {fileID: 1187719283860431244}
   m_Layer: 7
   m_Name: Hero
   m_TagString: Player
@@ -192,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 4664139802895112712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.23, y: -0.22, z: 0}
+  m_LocalPosition: {x: -8.489, y: -0.304, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -243,14 +246,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 7622835644602766602}
   speed: 5
-  jumpForce: 10
+  jumpForce: 13
   groundCheck: {fileID: 2252026119821372767}
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  grounded: 0
   animator: {fileID: 8861117496664365754}
-  dashForce: 10
+  gameManager: {fileID: 0}
+  sfxHero: {fileID: 1187719283860431244}
+  dashForce: 15
   dashCooldown: 1
 --- !u!95 &8861117496664365754
 Animator:
@@ -290,6 +294,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 256
+  gameManager: {fileID: 0}
+  sfx_hero: {fileID: 1187719283860431244}
+  canAttack: 0
   damage: 3
   range: 1.18
   attackCooldown: 1
@@ -306,11 +313,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad39c2e2438ae24f87f8d572acc537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShake: 1
   startingHealth: 3
   animator: {fileID: 8861117496664365754}
   canRevive: 1
+  canEnrage: 0
   reviveDelay: 3
-  iFrameDuration: 2
+  isInvulnerable: 0
+  iFrameDuration: 3
   numberOfFlashes: 3
   spriteRend: {fileID: 8564728118412132204}
   components:
@@ -331,6 +341,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  cameraAnim: {fileID: 0}
 --- !u!114 &4454213054220647095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd4c5dda48491441850c94e281879ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heightdie: -15
+  heightDie: -20
   heroHealth:
     m_PersistentCalls:
       m_Calls:
@@ -359,7 +370,63 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hero: {fileID: 3831260831326276769}
+--- !u!114 &1149685786601246312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4664139802895112712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4088117ee55dd7843aabce5a0bfddcaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  rb: {fileID: 7622835644602766602}
+--- !u!114 &2120670861809533880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4664139802895112712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b829b0212f8e3439d5ed831b6a05c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KnifePrefab: {fileID: 5072443086672146834, guid: 9ce94662ca145d545b081d16abc8219f, type: 3}
+  canThrowKnife: 0
+  KnifeSpeed: 10
+  KnifeCooldown: 2
+  sfx_hero: {fileID: 1187719283860431244}
+  gameManager: {fileID: 0}
+--- !u!114 &1187719283860431244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4664139802895112712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9b5d5e20821b848a69d3d5debd8f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hero_jump_start: {fileID: 8300000, guid: 24281bfcc7d45354c9fe2c156bc32798, type: 3}
+  hero_jump_end: {fileID: 8300000, guid: dde13d93a75afb044859b590c2b4e1de, type: 3}
+  hero_walk: {fileID: 8300000, guid: 83fc50aeccdc6f9499e8f7104c5df638, type: 3}
+  hero_attack_1: {fileID: 8300000, guid: 0c8de52f86d59174b8dcc88f180708d4, type: 3}
+  hero_attack_2: {fileID: 8300000, guid: aba81e7a03b563a45806e1004b7a1adf, type: 3}
+  hero_throw_knife: {fileID: 8300000, guid: 714b7cb1293120f48b455e24887732b2, type: 3}
+  hero_hurt: {fileID: 8300000, guid: 8730e1376550e5a48bc032cc251b2358, type: 3}
+  hero_die: {fileID: 8300000, guid: 3b5ba81ad3cdfed44893eb817e2d8cf4, type: 3}
+  hero_dash: {fileID: 8300000, guid: 62ebd38d200d8e94a9ce78cb8064a968, type: 3}
+  hero_hit: {fileID: 8300000, guid: 226c9efa8c0a02444b0481ab7e004b68, type: 3}
+  hero_revive: {fileID: 0}
+  hero_dash_upgrade: {fileID: 8300000, guid: 1ef920401e2b5914d8eca7639ddbe191, type: 3}
+  hero_knife_upgrade: {fileID: 8300000, guid: 2d05da3e66c935348a872297feecb1fd, type: 3}
 --- !u!1 &5528908651148053899
 GameObject:
   m_ObjectHideFlags: 0

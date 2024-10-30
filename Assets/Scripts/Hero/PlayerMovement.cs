@@ -16,13 +16,15 @@ public class PlayerMovement : MonoBehaviour
 
     private PauseMenu pauseMenu;
     private float horizontalInput;
-    public bool grounded {  get; private set; }
+    public bool grounded { get; private set; }
 
     [Header("Dash Parameters")]
     private bool isDashing;
     private bool canDash = false;
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCooldown = 1f;
+
+    private bool isInputBlocked = false;
 
     private void Start()
     {
@@ -31,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (pauseMenu.isPause) return;
+        if (pauseMenu.isPause || isInputBlocked) return;
 
         HandleMovementInput();
         FlipCharacter();
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (pauseMenu.isPause) return;
+        if (pauseMenu.isPause || isInputBlocked) return;
 
         CheckGroundStatus();
         HandleJump();
@@ -104,12 +106,18 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
     }
 
-
     public void DashEnable()
     {
         canDash = true;
     }
 
+    public void BlockInput()
+    {
+        isInputBlocked = true;
+    }
 
+    public void UnblockInput()
+    {
+        isInputBlocked = false;
+    }
 }
-
