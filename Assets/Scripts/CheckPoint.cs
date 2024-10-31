@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField] Spawning HeroSpawnGameController;
+    [SerializeField] Health heroHealth; 
     [Header("Sprite")]
     [SerializeField] SpriteRenderer ShrineSpriteRenderer;
     [SerializeField] private Sprite ActivatedShrineSprite;
@@ -27,6 +28,7 @@ public class CheckPoint : MonoBehaviour
                 Instantiate(effect, transform.position, Quaternion.identity);//particle activation
                 HeroSpawnGameController.UpdateCheckPoint(transform.position);
                 sfx_shrine.Shrine_Activate();
+                heroHealth.currentHealth = heroHealth.startingHealth;
                 ShrineSpriteRenderer.sprite = ActivatedShrineSprite; //shrine sprite change to activated
             } 
             else
