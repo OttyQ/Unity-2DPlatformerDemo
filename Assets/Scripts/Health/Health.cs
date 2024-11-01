@@ -131,4 +131,9 @@ public class Health : MonoBehaviour
         StartCoroutine(Revive(reviveDelay));
     }
 
+    public void HpRestore()
+    {
+        currentHealth = startingHealth;
+    }
+
 }

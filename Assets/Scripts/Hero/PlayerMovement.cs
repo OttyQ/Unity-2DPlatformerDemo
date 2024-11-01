@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash Parameters")]
     private bool isDashing;
     private bool canDash = false;
+    private float dashDuration = 0.2f;
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCooldown = 1f;
 
@@ -82,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isDashing", isDashing);
         animator.SetTrigger("Dashing");
 
-        yield return new WaitForSeconds(0.2f); // dash duration
+        yield return new WaitForSeconds(dashDuration); // dash duration
 
         body.gravityScale = originalGravity;
         body.velocity = Vector2.zero;
@@ -106,18 +107,9 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
     }
 
-    public void DashEnable()
-    {
-        canDash = true;
-    }
+    public void EnableDash() => canDash = true;
 
-    public void BlockInput()
-    {
-        isInputBlocked = true;
-    }
+    public void BlockInput() => isInputBlocked = true;
 
-    public void UnblockInput()
-    {
-        isInputBlocked = false;
-    }
+    public void UnblockInput() => isInputBlocked = false;
 }
