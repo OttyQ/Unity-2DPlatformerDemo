@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     [SerializeField] private bool canEnrage;
     [SerializeField] private float reviveDelay;
     public bool isInvulnerable;
-    public float currentHealth { get; private set; }
+    public float currentHealth;
     public bool dead;
 
     [Header("IFrames")]
@@ -69,7 +69,7 @@ public class Health : MonoBehaviour
                 Die();
                 if (canRevive)
                 {
-                    StartCoroutine(Revive(reviveDelay));
+                    HandleRevive();
                 }
             }
 
@@ -123,7 +123,17 @@ public class Health : MonoBehaviour
 
     public void MenuAwake() // Метод вызывается в событии анимации
     {
-        dyingMenu.MenuAwake(); // Вызов метода MenuAwake на объекте DyingMenu
+        dyingMenu.HandleActive(); 
+    }
+
+    public void HandleRevive()
+    {
+        StartCoroutine(Revive(reviveDelay));
+    }
+
+    public void HpRestore()
+    {
+        currentHealth = startingHealth;
     }
 
 }

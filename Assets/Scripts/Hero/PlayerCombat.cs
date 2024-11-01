@@ -67,7 +67,9 @@ public class PlayerCombat : MonoBehaviour
     }
 
     private void DamageEnemy(){
-        if(EnemyInSight()){
+
+        if (enemyHealth != null && EnemyInSight())
+        {
             enemyHealth.TakeDamage(damage);
         }
     }

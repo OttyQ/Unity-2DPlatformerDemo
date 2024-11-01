@@ -12,7 +12,7 @@ public class Upgrade_dash : MonoBehaviour, IUpgradeable
     public void ApplyUpgrade()
     {
         sfx_hero.Hero_dash_upgrade();
-        playerMove.DashEnable();
+        playerMove.EnableDash();
         sprite.enabled = false;
 
 

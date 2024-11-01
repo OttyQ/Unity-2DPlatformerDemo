@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField] Spawning HeroSpawnGameController;
+    [SerializeField] Health heroHealth; 
     [Header("Sprite")]
     [SerializeField] SpriteRenderer ShrineSpriteRenderer;
     [SerializeField] private Sprite ActivatedShrineSprite;
@@ -17,6 +18,9 @@ public class CheckPoint : MonoBehaviour
     {
         sfx_shrine = FindObjectOfType<SFX_Shrine>();
     }
+
+   
+
     public void NewCheckPointSet()
     {
         if (HeroSpawnGameController != null)
@@ -24,25 +28,34 @@ public class CheckPoint : MonoBehaviour
             Vector2 curCheck = transform.position;
             if (HeroSpawnGameController.CheckPointPos != curCheck)
             {
-                Instantiate(effect, transform.position, Quaternion.identity);//particle activation
-                HeroSpawnGameController.UpdateCheckPoint(transform.position);
-                sfx_shrine.Shrine_Activate();
                 ShrineSpriteRenderer.sprite = ActivatedShrineSprite; //shrine sprite change to activated
+
+                TriggerEffect();
+                
+                HeroSpawnGameController.UpdateCheckPoint(transform.position);
+
+                sfx_shrine.Shrine_Activate();
+                heroHealth.HpRestore();
+                
             } 
             else
             {
-                Instantiate(effect, transform.position, Quaternion.identity);//particle activation
+                TriggerEffect();
+
                 sfx_shrine.Shrine_Activate_alt();
             }
-        }
-            
-
-        
-        
-
-        
-        
-           
+        }     
         
     }
+
+
+    private void TriggerEffect()
+    {
+        if (effect != null)
+        {
+            Instantiate(effect, transform.position, Quaternion.identity);
+        }
+    }
+
+    
 }
