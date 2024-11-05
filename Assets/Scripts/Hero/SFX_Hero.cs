@@ -1,24 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public enum SoundType
+{
+    Attack,
+    SpecialAttack,
+    Alt_Attack,
+    Dash,
+    Run,
+    Jump,
+    Land,
+    Hurt,
+    Die
+}
+
+[ExecuteInEditMode]
 public class SFX_Hero : MonoBehaviour
 {
+
+
     [Header("Audio Clip")]
-    public AudioClip hero_jump_start;
-    public AudioClip hero_jump_end;
-    public AudioClip hero_walk;
-    public AudioClip hero_attack_1;
-    public AudioClip hero_attack_2;
-    public AudioClip hero_throw_knife;
-    public AudioClip hero_hurt;
-    public AudioClip hero_die;
-    public AudioClip hero_dash;
-    public AudioClip hero_hit;
-    public AudioClip hero_revive;
-    public AudioClip hero_dash_upgrade;
-    public AudioClip hero_knife_upgrade;
+
+    [SerializeField] private SoundLits[] soundList;
     AudioManager audioManager;
 
     private void Awake()
@@ -26,65 +32,85 @@ public class SFX_Hero : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
+    public void PlaySound(SoundType soundType)
+    {
+        SoundLits soundLits = Array.Find(soundList, s => s.name == soundType.ToString());
+        if (soundLits.Sounds != null && soundLits.Sounds.Length > 0)
+        {
+            AudioClip clipToPlay = soundLits.Sounds[UnityEngine.Random.Range(0, soundLits.Sounds.Length)];
+            audioManager.PlaySFX(clipToPlay);
+        }
+        else
+        {
+            Debug.LogWarning($"No audio clips found for SoundType: {soundType}");
+        }
+    }
+
     public void Hero_jump_start()
     {
-        audioManager.PlaySFX(hero_jump_start);
+        PlaySound(SoundType.Jump);
     }
     public void Hero_jump_end()
     {
-        audioManager.PlaySFX(hero_jump_end);
+        PlaySound(SoundType.Land);
     }
     public void Hero_walk()
     {
-        audioManager.PlaySFX(hero_walk);
+        PlaySound(SoundType.Run);
     }
     public void Hero_attack()
     {
-        int randomClip = Random.Range(1, 3);
-
-        string audioName = "hero_attack_" + randomClip.ToString();
-        AudioClip clip = (AudioClip)typeof(SFX_Hero).GetField(audioName).GetValue(this);
-        audioManager.PlaySFX(clip);
+        PlaySound(SoundType.Attack);
     }
 
     public void Hero_throw_knife()
     {
-        audioManager.PlaySFX(hero_throw_knife);
+        PlaySound(SoundType.SpecialAttack);
     }
 
     public void Hero_hurt()
     {
-        audioManager.PlaySFX(hero_hurt);
+        PlaySound(SoundType.Hurt);
     }
 
     public void Hero_die()
     {
-        audioManager.PlaySFX(hero_die);
+        PlaySound(SoundType.Die);
     }
     public void Hero_dash()
     {
-        audioManager.PlaySFX(hero_dash);
+        PlaySound(SoundType.Dash);
     }
     public void Hero_hit()
     {
-        audioManager.PlaySFX(hero_hit);
+        //audioManager.PlaySFX(hero_hit);
     }
 
     public void Hero_revive()
     {
         //do
-        audioManager.PlaySFX(hero_revive);
+        //audioManager.PlaySFX(hero_revive);
     }
 
-    public void Hero_dash_upgrade()
+    
+#if UNITY_EDITOR
+    private void OnEnable()
     {
-        audioManager.PlaySFX(hero_dash_upgrade);
+        string[] names = Enum.GetNames(typeof(SoundType));
+        Array.Resize(ref soundList, names.Length);
+        for (int i = 0; i < soundList.Length; i++)
+        {
+            soundList[i].name = names[i];
+        }
     }
+#endif
 
-    public void Hero_knife_upgrade()
-    {
-        audioManager.PlaySFX(hero_knife_upgrade);
-    }
+}
 
-
+[Serializable]
+public struct SoundLits
+{
+    public AudioClip[] Sounds { get => sounds; }
+    [HideInInspector] public string name;
+    [SerializeField] private AudioClip[] sounds;
 }

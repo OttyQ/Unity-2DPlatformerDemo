@@ -6,14 +6,16 @@ using UnityEngine;
 public class Upgrade : MonoBehaviour, IUpgradeable
 {
     [SerializeField] PlayerCombat playerCombat;
-    [SerializeField] SFX_Hero sfx_hero;
+    [SerializeField] AudioManager audioManager;
     [SerializeField] private GameObject tipSprite;
     [SerializeField] SpriteRenderer sprite;
-    [SerializeField] private float displayDuration = 2f; 
+    [SerializeField] private float displayDuration = 2f;
+
+    [SerializeField] private AudioClip upgrade;
 
     public void ApplyUpgrade()
     {
-        sfx_hero.Hero_attack();
+        audioManager.PlaySFX(upgrade);
         playerCombat.AttackEnable();
         sprite.enabled = false;
         

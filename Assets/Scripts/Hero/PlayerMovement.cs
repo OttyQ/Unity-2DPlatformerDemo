@@ -18,14 +18,10 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalInput;
     public bool grounded { get; private set; }
 
-    [Header("Dash Parameters")]
-    private bool isDashing;
-    private bool canDash = false;
-    private float dashDuration = 0.2f;
-    [SerializeField] private float dashForce;
-    [SerializeField] private float dashCooldown = 1f;
+    
 
-    private bool isInputBlocked = false;
+    private bool isInputBlocked = false ;
+    private PlayerDash playerDash;
 
     private void Start()
     {
@@ -39,8 +35,7 @@ public class PlayerMovement : MonoBehaviour
         HandleMovementInput();
         FlipCharacter();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-            StartCoroutine(Dash());
+        
     }
 
     private void FixedUpdate()
@@ -55,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleMovementInput()
     {
-        if (!isDashing)
+        if (!PlayerDash.instance.IsDashing())
         {
             horizontalInput = Input.GetAxis("Horizontal");
             body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
@@ -72,27 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private IEnumerator Dash()
-    {
-        isDashing = true;
-        canDash = false;
-        float originalGravity = body.gravityScale;
-        body.gravityScale = 0f;
-        body.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
-
-        animator.SetBool("isDashing", isDashing);
-        animator.SetTrigger("Dashing");
-
-        yield return new WaitForSeconds(dashDuration); // dash duration
-
-        body.gravityScale = originalGravity;
-        body.velocity = Vector2.zero;
-        isDashing = false;
-        animator.SetBool("isDashing", isDashing);
-
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
-    }
+    
 
     private void FlipCharacter()
     {
@@ -107,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
     }
 
-    public void EnableDash() => canDash = true;
+    
 
     public void BlockInput() => isInputBlocked = true;
 

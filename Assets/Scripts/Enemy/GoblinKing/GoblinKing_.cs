@@ -12,6 +12,8 @@ public class GoblinKing_ : MonoBehaviour
     Rigidbody2D rb;
     private SFX_Boss sfx_boss;
 
+    [SerializeField] GameObject EndGame;
+
     private void Awake()
     {
         sfx_boss = GetComponent<SFX_Boss>();
@@ -56,5 +58,10 @@ public class GoblinKing_ : MonoBehaviour
     public void HandleDie()
     {
         GameObject.Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        EndGame?.SetActive(true);
     }
 }

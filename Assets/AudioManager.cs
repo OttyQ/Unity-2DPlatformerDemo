@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+
+    public static AudioManager instance;
     [Header("Audio Source")]
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
@@ -14,6 +16,13 @@ public class AudioManager : MonoBehaviour
     public AudioClip buttonSelect;
     public AudioClip buttonPress;
 
+    [Header("UI AudioClip")]
+    [SerializeField] public AudioClip dashRes;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void Start()
     {
