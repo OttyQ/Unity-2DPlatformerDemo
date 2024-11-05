@@ -23,25 +23,26 @@ public class CheckPoint : MonoBehaviour
 
     public void NewCheckPointSet()
     {
-        if (HeroSpawnGameController != null)
+        if (HeroSpawnGameController != null )
         {
+            
             Vector2 curCheck = transform.position;
-            if (HeroSpawnGameController.CheckPointPos != curCheck)
+            if (HeroSpawnGameController.CheckPointPos != curCheck && ShrineSpriteRenderer.sprite != ActivatedShrineSprite)
             {
                 ShrineSpriteRenderer.sprite = ActivatedShrineSprite; //shrine sprite change to activated
 
                 TriggerEffect();
                 
                 HeroSpawnGameController.UpdateCheckPoint(transform.position);
-
-                sfx_shrine.Shrine_Activate();
                 heroHealth.HpRestore();
+                sfx_shrine.Shrine_Activate();
+                
                 
             } 
-            else
+            else if(heroHealth.currentHealth != heroHealth.startingHealth)
             {
                 TriggerEffect();
-
+                heroHealth.HpRestore();
                 sfx_shrine.Shrine_Activate_alt();
             }
         }     

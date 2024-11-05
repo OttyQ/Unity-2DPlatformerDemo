@@ -7,7 +7,7 @@
     public class dyingMenu : MonoBehaviour
     {
         //[SerializeField] private GameObject DyingMenu;
-        [SerializeField] private Health heroHealth;
+        
 
     private void OnEnable()
     {
@@ -28,7 +28,7 @@
             Time.timeScale = 1f;
             gameObject.SetActive(false);
             //isDead = false;
-    }
+        }
 
         public void GoToMM()
         {
