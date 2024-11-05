@@ -28,12 +28,12 @@ public class Health : MonoBehaviour
     [SerializeField] UnityEvent activateRespawn;
     [SerializeField] Animator cameraAnim;
 
-    public dyingMenu dyingMenu;
+    [SerializeField] private GameObject dyingMenu;
 
     private void Awake()
     {
         currentHealth = startingHealth;
-        dyingMenu = FindObjectOfType<dyingMenu>();
+       
     }
     public void TakeDamage(float _damage)
     {
@@ -123,7 +123,8 @@ public class Health : MonoBehaviour
 
     public void MenuAwake() // Метод вызывается в событии анимации
     {
-        dyingMenu.HandleActive(); 
+        dyingMenu?.SetActive(true);
+
     }
 
     public void HandleRevive()

@@ -6,15 +6,17 @@
 
     public class dyingMenu : MonoBehaviour
     {
-        [SerializeField] private GameObject DyingMenu;
+        //[SerializeField] private GameObject DyingMenu;
         [SerializeField] private Health heroHealth;
-        //bool isDead = false;
-    void Start(){
-            DyingMenu.SetActive(false);
+
+    private void OnEnable()
+    {
+        MenuAwake();
     }
     public void MenuAwake(){
+
             Debug.Log("Menu start");
-            DyingMenu.SetActive(true);
+            gameObject.SetActive(true);
             Time.timeScale = 0f;
             //isDead = true;
         }
@@ -22,11 +24,11 @@
         public void Revive()
         {
             Debug.Log("Resume start");
-            heroHealth.HandleRevive();
-            DyingMenu.SetActive(false);
+            //heroHealth.HandleRevive();
             Time.timeScale = 1f;
+            gameObject.SetActive(false);
             //isDead = false;
-        }
+    }
 
         public void GoToMM()
         {
@@ -36,7 +38,7 @@
 
         public void HandleActive()
         {
-            DyingMenu.SetActive(true);
+            gameObject.SetActive(true);
             MenuAwake();
         }
 }

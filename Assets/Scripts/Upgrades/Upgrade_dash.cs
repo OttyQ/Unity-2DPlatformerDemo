@@ -9,9 +9,12 @@ public class Upgrade_dash : MonoBehaviour, IUpgradeable
     [SerializeField] SpriteRenderer sprite;
     [SerializeField] private GameObject tipSprite;
     [SerializeField] private float displayDuration = 2f;
+
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private AudioClip upgrade;
     public void ApplyUpgrade()
     {
-        sfx_hero.Hero_dash_upgrade();
+        audioManager.PlaySFX(upgrade);
         playerMove.EnableDash();
         sprite.enabled = false;
 

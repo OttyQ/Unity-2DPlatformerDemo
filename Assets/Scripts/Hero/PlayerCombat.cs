@@ -57,6 +57,7 @@ public class PlayerCombat : MonoBehaviour
             sfx_hero.Hero_hit();
         }
 
+        Debug.Log("Enemy in signt?: " + hit.collider != null);
         return hit.collider!=null;
     }
 
@@ -67,7 +68,7 @@ public class PlayerCombat : MonoBehaviour
     }
 
     private void DamageEnemy(){
-
+        EnemyInSight();
         if (enemyHealth != null && EnemyInSight())
         {
             enemyHealth.TakeDamage(damage);
