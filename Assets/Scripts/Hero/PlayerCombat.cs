@@ -72,6 +72,7 @@ public class PlayerCombat : MonoBehaviour
         if (enemyHealth != null && EnemyInSight())
         {
             enemyHealth.TakeDamage(damage);
+            PlayerDash.instance.AddDashAmount();
         }
     }
 

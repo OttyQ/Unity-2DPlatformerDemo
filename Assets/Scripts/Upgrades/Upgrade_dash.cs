@@ -15,7 +15,7 @@ public class Upgrade_dash : MonoBehaviour, IUpgradeable
     public void ApplyUpgrade()
     {
         audioManager.PlaySFX(upgrade);
-        playerMove.EnableDash();
+        PlayerDash.instance.EnableDash();
         sprite.enabled = false;
 
 
