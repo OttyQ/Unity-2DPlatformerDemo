@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJump()
     {
-        if (Input.GetKey(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             sfxHero.Hero_jump_start();
             body.velocity = new Vector2(body.velocity.x, jumpForce);
