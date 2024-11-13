@@ -12,6 +12,7 @@ TagManager:
   - Upgrade_sword
   - Upgrade_dash
   - Upgrade_knife
+  - OneWayPlatform
   layers:
   - Default
   - TransparentFX
